@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="humanitarian_mitra_action" model="ir.actions.act_window">
+            <field name="name">Mitra</field>
+            <field name="res_model">humanitarian.mitra</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found! 
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="mitra" name="Mitra" parent="humanitarian_root" action="humanitarian_mitra_action" sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="humanitarian_cluster_action" model="ir.actions.act_window">
+            <field name="name">Cluster</field>
+            <field name="res_model">humanitarian.cluster</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found! 
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="cluster" name="Cluster" parent="humanitarian_root" action="humanitarian_cluster_action" sequence="1"/>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="humanitarian_pic_action" model="ir.actions.act_window">
+            <field name="name">PIC</field>
+            <field name="res_model">humanitarian.pic</field>
+            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found! 
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="pic" name="PIC" parent="humanitarian_root" action="humanitarian_pic_action" sequence="3"/>
+    </data>
+</odoo>

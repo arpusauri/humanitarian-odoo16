@@ -1,0 +1,5 @@
+<odoo>
+    <data>
+        <menuitem id="humanitarian_root" name="Humanitarian" sequence="0"/>
+    </data>
+</odoo>
