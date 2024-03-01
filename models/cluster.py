@@ -13,5 +13,5 @@ class Cluster(models.Model):
     ], string='Cluster')
     distrep_id = fields.Char(string="Distribution")
     program = fields.Char(string="Program")
-    jumlah = fields.Char(string="Jumlah")
+    jumlah = fields.Integer(string="Jumlah")
     satuan = fields.Char(string="Satuan")

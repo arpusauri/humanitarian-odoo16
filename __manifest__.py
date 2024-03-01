@@ -23,7 +23,9 @@
             'views/menuitems.views.xml',
             'views/cluster.action.views.xml',
             'views/mitra.action.views.xml',
-            'views/pic.action.views.xml'
+            'views/pic.action.views.xml',
+            'views/jenis_kejadian.action.views.xml',
+            'views/distrep.action.views.xml'
         ],
 
     'installable': True,
