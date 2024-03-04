@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!-- Kanban View -->
+        <record id="humanitarian_kebutuhan_mendesak_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.kebutuhan_mendesak.view.kanban</field>
+            <field name="model">humanitarian.kebutuhan_mendesak</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div
+                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
+                                class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div class="oe_kanban_card">
+                                        <div class="oe_kanban_content"
+                                            style="color: #000; margin-left: 15px;">
+                                            <h2>
+                                                <field name="kebutuhan_mendesak" />
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="humanitarian_kebutuhan_mendesak_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.kebutuhan_mendesak.view.tree</field>
+            <field name="model">humanitarian.kebutuhan_mendesak</field>
+            <field name="arch" type="xml">
+                <tree string="Kebutuhan Mendesak Details">
+                    <field name="kebutuhan_mendesak"></field>
+                    <field name="site_id"></field>
+                    <field name="jumlah"></field>
+                    <field name="satuan"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View Action -->
+        <record id="humanitarian_kebutuhan_mendesak_action" model="ir.actions.act_window">
+            <field name="name">Kebutuhan Mendesak</field>
+            <field name="res_model">humanitarian.kebutuhan_mendesak</field>
+            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found!
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="kebutuhan_mendesak" name="Kebutuhan Mendesak" parent="humanitarian_config"
+            action="humanitarian_kebutuhan_mendesak_action" sequence="10" />
+    </data>
+</odoo>

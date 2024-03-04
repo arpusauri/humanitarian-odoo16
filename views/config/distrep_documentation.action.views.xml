@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Kanban View -->
-        <record id="humanitarian_cluster_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.cluster.view.kanban</field>
-            <field name="model">humanitarian.cluster</field>
+        <record id="humanitarian_distrep_documentation_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.distrep_documentation.view.kanban</field>
+            <field name="model">humanitarian.distrep_documentation</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -16,10 +16,8 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="program" />
+                                                <field name="distrep_id" />
                                             </h2>
-                                            <div>Cluster: <field name="cluster" /></div>
-                                            <div>Satuan: <field name="satuan" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -31,25 +29,22 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_cluster_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.cluster.view.tree</field>
-            <field name="model">humanitarian.cluster</field>
+        <record id="humanitarian_distrep_documentation_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.distrep_documentation.view.tree</field>
+            <field name="model">humanitarian.distrep_documentation</field>
             <field name="arch" type="xml">
-                <tree string="Cluster Details">
-                    <field name="cluster"></field>
+                <tree string="Distrep Documentation Details">
+                    <field name="image"></field>
                     <field name="distrep_id"></field>
-                    <field name="program"></field>
-                    <field name="jumlah"></field>
-                    <field name="satuan"></field>
                 </tree>
             </field>
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_cluster_action" model="ir.actions.act_window">
-            <field name="name">Cluster</field>
-            <field name="res_model">humanitarian.cluster</field>
-            <field name="view_mode">kanban,tree,form,graph</field>
+        <record id="humanitarian_distrep_documentation_action" model="ir.actions.act_window">
+            <field name="name"></field>
+            <field name="res_model">humanitarian.distrep_documentation</field>
+            <field name="view_mode">kanban,tree,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
                     (Error) Data not found!
@@ -58,7 +53,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="cluster" name="Cluster" parent="humanitarian_root"
-            action="humanitarian_cluster_action" sequence="2" />
+        <menuitem id="distrep_documentation" name="Dokumentasi" parent="humanitarian_config"
+            action="humanitarian_distrep_documentation_action" sequence="14" />
     </data>
 </odoo>

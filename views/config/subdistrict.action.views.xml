@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Kanban View -->
-        <record id="humanitarian_pic_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.pic.view.kanban</field>
-            <field name="model">humanitarian.pic</field>
+        <record id="humanitarian_subdistrict_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.subdistrict.view.kanban</field>
+            <field name="model">humanitarian.subdistrict</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="pic" />
+                                                <field name="subdistrict_id" />
                                             </h2>
                                         </div>
                                     </div>
@@ -29,20 +29,20 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_pic_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.pic.view.tree</field>
-            <field name="model">humanitarian.pic</field>
+        <record id="humanitarian_subdistrict_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.subdistrict.view.tree</field>
+            <field name="model">humanitarian.subdistrict</field>
             <field name="arch" type="xml">
-                <tree string="PIC Details">
-                    <field name="pic"></field>
+                <tree string="subdistrict Details">
+                    <field name="subdistrict_id"></field>
                 </tree>
             </field>
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_pic_action" model="ir.actions.act_window">
-            <field name="name">PIC</field>
-            <field name="res_model">humanitarian.pic</field>
+        <record id="humanitarian_subdistrict_action" model="ir.actions.act_window">
+            <field name="name">Subdistrict</field>
+            <field name="res_model">humanitarian.subdistrict</field>
             <field name="view_mode">kanban,tree,form,graph</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -52,7 +52,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="pic" name="PIC" parent="humanitarian_root" action="humanitarian_pic_action"
-            sequence="5" />
+        <menuitem id="subdistrict" name="Subdistrict" parent="humanitarian_config"
+            action="humanitarian_subdistrict_action" sequence="4" />
     </data>
 </odoo>

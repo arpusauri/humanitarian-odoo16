@@ -81,7 +81,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="jenis_kejadian" name="Jenis Kejadian" parent="humanitarian_root"
-            action="humanitarian_jenis_kejadian_action" sequence="3" />
+        <menuitem id="jenis_kejadian" name="Jenis Kejadian" parent="humanitarian_config"
+            action="humanitarian_jenis_kejadian_action" sequence="5" />
     </data>
 </odoo>

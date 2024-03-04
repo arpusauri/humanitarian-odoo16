@@ -1,12 +1,12 @@
 from odoo import models, fields
 
-class Distrep(models.Model):
-    _name = "humanitarian.distrep"
-    _description = 'Distrep'
+class Sitrep(models.Model):
+    _name = "humanitarian.sitrep"
+    _description = 'Sitrep'
 
 
-    sitrep_id = fields.Char(string="Nama Kejadian")
-    pic = fields.Char(string="PIC")
+    jenis_kejadian = fields.Char(string="Jenis Kejadian")
+    nama_kejadian = fields.Char(string="Nama Kejadian")
     province_id = fields.Char(string="Provinsi")
     city_id = fields.Char(string="Kota/Kabupaten")
     district_id = fields.Char(string="Kecamatan")
@@ -18,7 +18,3 @@ class Distrep(models.Model):
         ('draft', 'Draft'),
         ('publish', 'Publish')
     ], string='State')
-    no_spk = fields.Char(string="No. SPK")
-    tanggal_penyaluran = fields.Date(string="Tanggal Penyaluran")
-    jml_pm = fields.Integer(string="Jumlah PM")
-    jml_relawan = fields.Integer(string="Jumlah Relawan")

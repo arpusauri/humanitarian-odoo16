@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="siterep_id" />
+                                                <field name="sitrep_id" />
                                             </h2>
                                             <div>PIC:<field name="pic"></field></div>
                                             <div>Provinsi:<field name="province_id"></field></div>
@@ -47,7 +47,7 @@
             <field name="model">humanitarian.distrep</field>
             <field name="arch" type="xml">
                 <tree string="Distribution Reports">
-                    <field name="siterep_id"></field>
+                    <field name="sitrep_id"></field>
                     <field name="pic"></field>
                     <field name="province_id"></field>
                     <field name="city_id"></field>
@@ -75,7 +75,7 @@
                         <notebook>
                             <page string="Nama Kejadian">
                                 <group>
-                                    <field name="siterep_id"></field>
+                                    <field name="sitrep_id"></field>
                                     <field name="pic"></field>
                                 </group>
                             </page>
@@ -96,6 +96,7 @@
                             </page>
                             <page string="Details">
                                 <group>
+                                    <field name="state"></field>
                                     <field name="no_spk"></field>
                                     <field name="tanggal_penyaluran"></field>
                                     <field name="jml_pm"></field>
@@ -122,6 +123,6 @@
 
         <!-- Menu Item -->
         <menuitem id="distrep" name="Distribution Report" parent="humanitarian_root"
-            action="humanitarian_distrep_action" sequence="1" />
+            action="humanitarian_distrep_action" sequence="2" />
     </data>
 </odoo>
