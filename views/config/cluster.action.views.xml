@@ -59,6 +59,6 @@
 
         <!-- Menu Item -->
         <menuitem id="cluster_id" name="Cluster" parent="humanitarian_config"
-            action="humanitarian_cluster_action" sequence="13" />
+            action="humanitarian_cluster_action" sequence="14" />
     </data>
 </odoo>

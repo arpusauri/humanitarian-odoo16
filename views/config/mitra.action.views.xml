@@ -53,6 +53,6 @@
 
         <!-- Menu Item -->
         <menuitem id="mitra" name="Mitra" parent="humanitarian_config"
-            action="humanitarian_mitra_action" sequence="12" />
+            action="humanitarian_mitra_action" sequence="13" />
     </data>
 </odoo>

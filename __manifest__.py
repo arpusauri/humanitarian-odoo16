@@ -37,7 +37,8 @@
             'views/config/pengungsi.action.views.xml',
             'views/config/kebutuhan_mendesak.action.views.xml',
             'views/config/sitrep_documentation.action.views.xml',
-            'views/config/distrep_documentation.action.views.xml'
+            'views/config/distrep_documentation.action.views.xml',
+            'views/config/dampaksarpras.action.views.xml'
         ],
 
     'installable': True,

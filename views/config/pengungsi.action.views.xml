@@ -55,6 +55,6 @@
 
         <!-- Menu Item -->
         <menuitem id="pengungsi" name="Pengungsi" parent="humanitarian_config"
-            action="humanitarian_pengungsi_action" sequence="9" />
+            action="humanitarian_pengungsi_action" sequence="10" />
     </data>
 </odoo>

@@ -55,6 +55,6 @@
 
         <!-- Menu Item -->
         <menuitem id="lokasi_terdampak" name="Lokasi Terdampak" parent="humanitarian_config"
-            action="humanitarian_lokasi_terdampak_action" sequence="7" />
+            action="humanitarian_lokasi_terdampak_action" sequence="8" />
     </data>
 </odoo>

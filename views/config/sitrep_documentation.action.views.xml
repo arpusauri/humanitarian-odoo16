@@ -54,6 +54,6 @@
 
         <!-- Menu Item -->
         <menuitem id="sitrep_documentation" name="Dokumentasi" parent="humanitarian_config"
-            action="humanitarian_sitrep_documentation_action" sequence="11" />
+            action="humanitarian_sitrep_documentation_action" sequence="12" />
     </data>
 </odoo>

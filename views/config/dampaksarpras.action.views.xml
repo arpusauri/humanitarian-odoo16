@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Kanban View -->
-        <record id="humanitarian_kebutuhan_mendesak_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.kebutuhan_mendesak.view.kanban</field>
-            <field name="model">humanitarian.kebutuhan_mendesak</field>
+        <record id="humanitarian_dampaksarpras_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.dampaksarpras.view.kanban</field>
+            <field name="model">humanitarian.dampaksarpras</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="kebutuhan_mendesak" />
+                                                <field name="site_id" />
                                             </h2>
                                         </div>
                                     </div>
@@ -29,12 +29,12 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_kebutuhan_mendesak_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.kebutuhan_mendesak.view.tree</field>
-            <field name="model">humanitarian.kebutuhan_mendesak</field>
+        <record id="humanitarian_dampaksarpras_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.dampaksarpras.view.tree</field>
+            <field name="model">humanitarian.dampaksarpras</field>
             <field name="arch" type="xml">
-                <tree string="Kebutuhan Mendesak Details">
-                    <field name="kebutuhan_mendesak"></field>
+                <tree string="Dampak Sarpras Details">
+                    <field name="kerusakan"></field>
                     <field name="site_id"></field>
                     <field name="jumlah"></field>
                     <field name="satuan"></field>
@@ -43,9 +43,9 @@
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_kebutuhan_mendesak_action" model="ir.actions.act_window">
-            <field name="name">Kebutuhan Mendesak</field>
-            <field name="res_model">humanitarian.kebutuhan_mendesak</field>
+        <record id="humanitarian_dampaksarpras_action" model="ir.actions.act_window">
+            <field name="name">Dampak Sarpras</field>
+            <field name="res_model">humanitarian.dampaksarpras</field>
             <field name="view_mode">kanban,tree,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -55,7 +55,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="kebutuhan_mendesak" name="Kebutuhan Mendesak" parent="humanitarian_config"
-            action="humanitarian_kebutuhan_mendesak_action" sequence="11" />
+        <menuitem id="dampaksarpras" name="Dampak Sarpras" parent="humanitarian_config"
+            action="humanitarian_dampaksarpras_action" sequence="7" />
     </data>
 </odoo>
