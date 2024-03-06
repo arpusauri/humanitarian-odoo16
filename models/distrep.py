@@ -3,8 +3,10 @@ from odoo import models, fields
 class Distrep(models.Model):
     _name = "humanitarian.distrep"
     _description = 'Distrep'
+    _rec_name = 'distrep_id'
 
     sitrep_id = fields.Many2one('humanitarian.sitrep', string="Nama Kejadian")
+    distrep_id = fields.Many2one('humanitarian.jenis_kejadian', string="Jenis Kejadian")
     pic = fields.Many2one('humanitarian.pic', string="PIC")
     province_id = fields.Many2one('humanitarian.province', string="Provinsi")
     city_id = fields.Many2one('humanitarian.city', string="Kota/Kabupaten")

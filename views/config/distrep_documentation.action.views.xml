@@ -44,7 +44,7 @@
         <record id="humanitarian_distrep_documentation_action" model="ir.actions.act_window">
             <field name="name"></field>
             <field name="res_model">humanitarian.distrep_documentation</field>
-            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
                     (Error) Data not found!

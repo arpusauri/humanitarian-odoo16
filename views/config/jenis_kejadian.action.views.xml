@@ -43,7 +43,7 @@
         <record id="humanitarian_jenis_kejadian_action" model="ir.actions.act_window">
             <field name="name">Jenis Kejadian</field>
             <field name="res_model">humanitarian.jenis_kejadian</field>
-            <field name="view_mode">kanban,tree,form,graph,pivot</field>
+            <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
                     (Error) Data not found!

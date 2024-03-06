@@ -37,7 +37,6 @@
             <field name="arch" type="xml">
                 <tree string="Cluster Details">
                     <field name="cluster"></field>
-                    <field name="distrep_id"></field>
                     <field name="program"></field>
                     <field name="jumlah"></field>
                     <field name="satuan"></field>
@@ -49,7 +48,7 @@
         <record id="humanitarian_cluster_action" model="ir.actions.act_window">
             <field name="name">Cluster</field>
             <field name="res_model">humanitarian.cluster</field>
-            <field name="view_mode">kanban,tree,form,graph</field>
+            <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
                     (Error) Data not found!

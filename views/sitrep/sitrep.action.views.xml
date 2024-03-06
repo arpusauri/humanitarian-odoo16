@@ -17,9 +17,9 @@
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
                                                 <field name="jenis_kejadian" />
-                                            </h2
-                                            >
+                                            </h2>
                                             <div>Nama Kejadian:<field name="nama_kejadian"></field></div>
+                                            <div>PIC:<field name="pic"></field></div>
                                             <div>Provinsi:<field name="province_id"></field></div>
                                             <div>Kota/Kabupaten:<field name="city_id"></field></div>
                                             <div>Kecamatan:<field name="district_id"></field></div>

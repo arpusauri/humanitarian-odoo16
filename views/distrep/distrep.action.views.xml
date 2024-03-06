@@ -18,6 +18,7 @@
                                             <h2>
                                                 <field name="sitrep_id" />
                                             </h2>
+                                            <div>PIC:<field name="distrep_id"></field></div>
                                             <div>PIC:<field name="pic"></field></div>
                                             <div>Provinsi:<field name="province_id"></field></div>
                                             <div>Kota/Kabupaten:<field name="city_id"></field></div>
@@ -48,6 +49,7 @@
             <field name="arch" type="xml">
                 <tree string="Distribution Reports">
                     <field name="sitrep_id"></field>
+                    <field name="distrep_id"></field>
                     <field name="pic"></field>
                     <field name="province_id"></field>
                     <field name="city_id"></field>
@@ -76,6 +78,7 @@
                             <page string="Nama Kejadian">
                                 <group>
                                     <field name="sitrep_id"></field>
+                                    <field name="distrep_id"></field>
                                     <field name="pic"></field>
                                 </group>
                             </page>
