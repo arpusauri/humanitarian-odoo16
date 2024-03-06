@@ -4,13 +4,12 @@ class Distrep(models.Model):
     _name = "humanitarian.distrep"
     _description = 'Distrep'
 
-
-    sitrep_id = fields.Char(string="Nama Kejadian")
-    pic = fields.Char(string="PIC")
-    province_id = fields.Char(string="Provinsi")
-    city_id = fields.Char(string="Kota/Kabupaten")
-    district_id = fields.Char(string="Kecamatan")
-    subdistrict_id = fields.Char(string="Desa")
+    sitrep_id = fields.Many2one('humanitarian.sitrep', string="Nama Kejadian")
+    pic = fields.Many2one('humanitarian.pic', string="PIC")
+    province_id = fields.Many2one('humanitarian.province', string="Provinsi")
+    city_id = fields.Many2one('humanitarian.city', string="Kota/Kabupaten")
+    district_id = fields.Many2one('humanitarian.district', string="Kecamatan")
+    subdistrict_id = fields.Many2one('humanitarian.subdistrict', string="Desa")
     alamat_lengkap = fields.Text(string="Alamat Lengkap")
     latitude = fields.Text(string="Latitude")
     longitude = fields.Text(string="Longitude")

@@ -5,4 +5,4 @@ class SitrepDocumentation(models.Model):
     _description = 'Sitrep Documentation'
 
     image = fields.Binary(string="Image")
-    site_id = fields.Char(string="Situation")
+    site_id = fields.Many2one('humanitarian.sitrep', string='Situation')

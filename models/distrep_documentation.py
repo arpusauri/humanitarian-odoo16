@@ -5,4 +5,4 @@ class DistrepDocumentation(models.Model):
     _description = 'Distrep Documentation'
 
     image = fields.Binary(string="Image")
-    distrep_id = fields.Char(string="Distribution")
+    distrep_id = fields.Many2one('humanitarian.distrep', string='Distribution')

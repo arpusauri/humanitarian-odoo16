@@ -5,6 +5,6 @@ class DampakSarpras(models.Model):
     _description = 'Dampak Sarpras'
 
     kerusakan = fields.Char(string="Kerusakan")
-    site_id = fields.Char(string="Situation")
+    site_id = fields.Many2one('humanitarian.sitrep', string='Situation')
     jumlah = fields.Integer(string="Jumlah")
     satuan = fields.Char(string="Satuan")

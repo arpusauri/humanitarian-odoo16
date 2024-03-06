@@ -5,5 +5,5 @@ class Pengungsi(models.Model):
     _description = 'Pengungsi'
 
     lokasi_pengungsian = fields.Char(string="Lokasi Pengungsian")
-    site_id = fields.Char(string="Situation")
+    site_id = fields.Many2one('humanitarian.sitrep', string='Situation')
     jumlah = fields.Integer(string="Jumlah")

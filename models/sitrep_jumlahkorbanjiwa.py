@@ -5,5 +5,5 @@ class JumlahKorbanJiwa(models.Model):
     _description = 'Jumlah Korban Jiwa'
 
     jenis_korban_jiwa = fields.Char(string="Jenis Korban Jiwa")
-    site_id = fields.Char(string="Situation")
+    site_id = fields.Many2one('humanitarian.sitrep', string='Situation')
     jumlah = fields.Integer(string="Jumlah")
