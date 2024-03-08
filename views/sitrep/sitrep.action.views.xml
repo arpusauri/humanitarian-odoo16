@@ -76,7 +76,11 @@
                                 <group>
                                     <group>
                                         <field name="province_id"></field>
-                                        <field name="city_id"></field>
+                                        <field name="city_id" >
+                                            <tree editable="bottom">
+                                                <field name="name" widget="many2one"/>
+                                            </tree>
+                                        </field>
                                         <field name="district_id"></field>
                                         <field name="subdistrict_id"></field>
                                     </group>
