@@ -34,7 +34,7 @@
             <field name="model">humanitarian.sitrep_documentation</field>
             <field name="arch" type="xml">
                 <tree string="Lokasi Terdampak Details">
-                    <field name="image"></field>
+                    <field name="image" widget="image"></field>
                     <field name="site_id"></field>
                 </tree>
             </field>

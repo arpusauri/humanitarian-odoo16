@@ -36,7 +36,7 @@
                 <tree string="Pengungsi Details">
                     <field name="lokasi_pengungsian"></field>
                     <field name="site_id"></field>
-                    <field name="jumlah"></field>
+                    <field name="jumlah" widget="integer"></field>
                 </tree>
             </field>
         </record>

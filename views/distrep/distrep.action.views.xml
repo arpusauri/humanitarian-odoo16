@@ -18,7 +18,7 @@
                                             <h2>
                                                 <field name="sitrep_id" />
                                             </h2>
-                                            <div>PIC:<field name="distrep_id"></field></div>
+                                            <div>Nama Kejadian:<field name="distrep_id"></field></div>
                                             <div>PIC:<field name="pic"></field></div>
                                             <div>Provinsi:<field name="province_id"></field></div>
                                             <div>Kota/Kabupaten:<field name="city_id"></field></div>
@@ -30,8 +30,9 @@
                                             <div>State:<field name="state"></field></div>
                                             <div>No. SPK:<field name="no_spk"></field></div>
                                             <div>Tanggal Penyaluran:<field name="tanggal_penyaluran"></field></div>
-                                            <div>Jumlah PM:<field name="jml_pm"></field></div>
-                                            <div>Jumlah Relawan:<field name="jml_relawan"></field></div>
+                                            <div>Jumlah PM:<field name="jml_pm" widget="integer"></field></div>
+                                            <div>Jumlah Relawan:<field name="jml_relawan"
+                                                    widget="integer"></field></div>
                                         </div>
                                     </div>
                                 </div>

@@ -8,7 +8,7 @@
                 <form string="City Items">
                     <sheet>
                         <group>
-                            <field name="name"></field>
+                            <field name="city_id"></field>
                         </group>
                     </sheet>
                 </form>
@@ -49,7 +49,7 @@
             <field name="model">humanitarian.city</field>
             <field name="arch" type="xml">
                 <tree string="city Details">
-                    <field name="name"></field>
+                    <field name="city_id"></field>
                 </tree>
             </field>
         </record>

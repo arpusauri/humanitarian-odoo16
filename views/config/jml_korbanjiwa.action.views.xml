@@ -36,7 +36,7 @@
                 <tree string="Lokasi Terdampak Details">
                     <field name="jenis_korban_jiwa"></field>
                     <field name="site_id"></field>
-                    <field name="jumlah"></field>
+                    <field name="jumlah" widget="integer"></field>
                 </tree>
             </field>
         </record>
