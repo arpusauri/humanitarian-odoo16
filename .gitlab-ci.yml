@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+deploy_dev1:
+  image: ubuntu:latest
+  stage: deploy
+  before_script:
+    - "which ssh-agent || ( apt-get update -y && apt-get install -y openssh-client )"
+    - eval $(ssh-agent -s)
+    - echo "$SERVER_KEY_DEV1" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - ssh-keyscan -p 2244 ag.cnt.id >> ~/.ssh/known_hosts
+  script:
+    - ssh -p 2244 gitlab@ag.cnt.id "cd /docker/erp16-rz-dev1.cnt.id/custom_modules/humanitarian && git pull origin main"
+    - ssh -p 2244 gitlab@ag.cnt.id "cd /docker/erp16-rz-dev1.cnt.id && docker-compose restart"
+  only:
+    - main
