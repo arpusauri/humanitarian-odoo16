@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Kanban View -->
-        <record id="humanitarian_district_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.district.view.kanban</field>
-            <field name="model">humanitarian.district</field>
+        <record id="humanitarian_province_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.province_id.view.kanban</field>
+            <field name="model">humanitarian.province</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="district_id" />
+                                                <field name="province_id" />
                                             </h2>
                                         </div>
                                     </div>
@@ -29,20 +29,20 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_district_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.district.view.tree</field>
-            <field name="model">humanitarian.district</field>
+        <record id="humanitarian_province_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.province.view.tree</field>
+            <field name="model">humanitarian.province</field>
             <field name="arch" type="xml">
-                <tree string="district Details">
-                    <field name="district_id"></field>
+                <tree string="Province Details">
+                    <field name="province_id"></field>
                 </tree>
             </field>
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_district_action" model="ir.actions.act_window">
-            <field name="name">District</field>
-            <field name="res_model">humanitarian.district</field>
+        <record id="humanitarian_province_action" model="ir.actions.act_window">
+            <field name="name">Province</field>
+            <field name="res_model">humanitarian.province</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -52,7 +52,8 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="district" name="District" parent="humanitarian_config"
-            action="humanitarian_district_action" sequence="3" />
+        <menuitem id="province" name="Provinsi" parent="humanitarian_config"
+            action="humanitarian_province_action"
+            sequence="1" />
     </data>
 </odoo>
