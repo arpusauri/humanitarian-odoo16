@@ -2,7 +2,7 @@ stages:
   - deploy
 
 deploy_dev1:
-  image: ubuntu:latest
+  image: debian:latest
   stage: deploy
   before_script:
     - "which ssh-agent || ( apt-get update -y && apt-get install -y openssh-client )"
