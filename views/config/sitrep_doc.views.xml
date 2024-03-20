@@ -1,9 +1,9 @@
 <odoo>
     <data>
         <!-- Kanban View -->
-        <record id="humanitarian_province_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.province_id.view.kanban</field>
-            <field name="model">humanitarian.province</field>
+        <record id="humanitarian_sitrep_documentation_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_documentation.view.kanban</field>
+            <field name="model">humanitarian.sitrep_documentation</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="province_id" />
+                                                <field name="site_id" />
                                             </h2>
                                         </div>
                                     </div>
@@ -29,20 +29,21 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_province_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.province.view.tree</field>
-            <field name="model">humanitarian.province</field>
+        <record id="humanitarian_sitrep_documentation_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_documentation.view.tree</field>
+            <field name="model">humanitarian.sitrep_documentation</field>
             <field name="arch" type="xml">
-                <tree string="Province Details">
-                    <field name="province_id"></field>
+                <tree string="Lokasi Terdampak Details">
+                    <field name="image" widget="image"></field>
+                    <field name="site_id"></field>
                 </tree>
             </field>
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_province_action" model="ir.actions.act_window">
-            <field name="name">Province</field>
-            <field name="res_model">humanitarian.province</field>
+        <record id="humanitarian_sitrep_documentation_action" model="ir.actions.act_window">
+            <field name="name">Dokumentasi</field>
+            <field name="res_model">humanitarian.sitrep_documentation</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -52,8 +53,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="province" name="Province" parent="humanitarian_config"
-            action="humanitarian_province_action"
-            sequence="1" />
+        <menuitem id="sitrep_documentation" name="Dokumentasi Site Report" parent="humanitarian_config"
+            action="humanitarian_sitrep_documentation_action" sequence="12" />
     </data>
 </odoo>

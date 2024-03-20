@@ -1,5 +1,51 @@
 <odoo>
     <data>
+        <!-- Form View -->
+        <record id="humanitarian_sitrep_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep.view.form</field>
+            <field name="model">humanitarian.sitrep</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <notebook>
+                            <page string="Nama Kejadian">
+                                <group string="Informasi Kejadian">
+                                    <field name="jenis_kejadian"></field>
+                                    <field name="nama_kejadian"></field>
+                                </group>
+                                <group string="Informasi Lokasi">
+                                    <group>
+                                        <field name="province_id"></field>
+                                        <field name="city_id"></field>
+                                        <field name="district_id"></field>
+                                        <field name="subdistrict_id"></field>
+                                        <field name="alamat_lengkap"></field>
+                                        <field name="latitude"></field>
+                                        <field name="longitude"></field>
+                                    </group>
+                                </group>
+                                <group string="Informasi State">
+                                    <field name="state"></field>
+                                </group>
+                            </page>
+                            <page string="PIC Lapangan">
+                            </page>
+                            <page string="Dampak Sarpras">
+                            </page>
+                            <page string="Lokasi Terdampak">
+                            </page>
+                            <page string="Jumlah Korban">
+                            </page>
+                            <page string="Kebutuhan Mendesak">
+                            </page>
+                            <page string="Dokumentasi Site Report">
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <!-- Kanban View -->
         <record id="humanitarian_sitrep_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.sitrep.view.kanban</field>
@@ -55,46 +101,6 @@
                     <field name="longitude"></field>
                     <field name="state"></field>
                 </tree>
-            </field>
-        </record>
-
-        <!-- Form View -->
-        <record id="humanitarian_sitrep_view_form" model="ir.ui.view">
-            <field name="name">humanitarian.sitrep.view.form</field>
-            <field name="model">humanitarian.sitrep</field>
-            <field name="arch" type="xml">
-                <form string="sitrep Items">
-                    <sheet>
-                        <notebook>
-                            <page string="Nama Kejadian">
-                                <group>
-                                    <field name="jenis_kejadian"></field>
-                                    <field name="nama_kejadian"></field>
-                                </group>
-                            </page>
-                            <page string="Lokasi">
-                                <group>
-                                    <group>
-                                        <field name="province_id"></field>
-                                        <field name="city_id" ></field>
-                                        <field name="district_id"></field>
-                                        <field name="subdistrict_id"></field>
-                                    </group>
-                                    <group>
-                                        <field name="alamat_lengkap"></field>
-                                        <field name="latitude"></field>
-                                        <field name="longitude"></field>
-                                    </group>
-                                </group>
-                            </page>
-                            <page string="Details">
-                                <group>
-                                    <field name="state"></field>
-                                </group>
-                            </page>
-                        </notebook>
-                    </sheet>
-                </form>
             </field>
         </record>
 

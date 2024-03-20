@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="humanitarian_config" parent="humanitarian_root" name="Config"
+            sequence="3" />
+    </data>
+</odoo>
