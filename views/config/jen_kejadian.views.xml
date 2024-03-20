@@ -53,6 +53,6 @@
 
         <!-- Menu Item -->
         <menuitem id="jenis_kejadian" name="Jenis Kejadian" parent="humanitarian_config"
-            action="humanitarian_jenis_kejadian_action" sequence="5" />
+            action="humanitarian_jenis_kejadian_action" sequence="2" />
     </data>
 </odoo>

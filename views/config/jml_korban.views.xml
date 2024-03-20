@@ -54,7 +54,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="jml_korbanjiwa" name="Jumlah Korban" parent="humanitarian_config"
-            action="humanitarian_jml_korbanjiwa_action" sequence="9" />
+        <menuitem id="jml_korbanjiwa" name="Jumlah Korban" parent="humanitarian_sitrep"
+            action="humanitarian_jml_korbanjiwa_action" sequence="3" />
     </data>
 </odoo>

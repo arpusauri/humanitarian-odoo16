@@ -1,0 +1,92 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="humanitarian_user_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.user.view.form</field>
+            <field name="model">humanitarian.user</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group string="USER">
+                            <field name="fullname"></field>
+                            <field name="phone"></field>
+                            <field name="email"></field>
+                            <field name="id_card"></field>
+                            <field name="id_google" readonly="1"></field>
+                            <field name="picture_url"></field>
+                            <field name="active" type="checkbox"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Kanban View -->
+        <record id="humanitarian_user_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.user.view.kanban</field>
+            <field name="model">humanitarian.user</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div
+                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
+                                class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div class="oe_kanban_card">
+                                        <div class="oe_kanban_content"
+                                            style="color: #000; margin-left: 15px;">
+                                            <h2>
+                                                <field name="fullname" />
+                                            </h2>
+                                            <div>Phone: <field name="phone" /></div>
+                                            <div>Email: <field name="email" /></div>
+                                            <div>ID Card: <field name="id_card" /></div>
+                                            <div>ID Google: <field name="id_google" readonly="1" /></div>
+                                            <div>Active: <field name="active" /></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="humanitarian_user_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.user.view.tree</field>
+            <field name="model">humanitarian.user</field>
+            <field name="arch" type="xml">
+                <tree string="User Details">
+                    <field name="fullname"></field>
+                    <field name="phone"></field>
+                    <field name="email"></field>
+                    <field name="id_card"></field>
+                    <field name="id_google" 
+                    readonly="1"
+                    ></field>
+                    <field name="picture_url"></field>
+                    <field name="active" type="checkbox"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- View Action -->
+        <record id="humanitarian_user_action" model="ir.actions.act_window">
+            <field name="name">User</field>
+            <field name="res_model">humanitarian.user</field>
+            <field name="view_mode">tree,kanban,form,graph,pivot</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found!
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="user_id" name="User" parent="humanitarian_root"
+            action="humanitarian_user_action" sequence="1" />
+    </data>
+</odoo>

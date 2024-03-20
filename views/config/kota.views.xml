@@ -67,7 +67,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="city" name="Kota" parent="humanitarian_config"
+        <menuitem id="city" name="Kota" parent="humanitarian_location"
             action="humanitarian_city_action" sequence="2" />
     </data>
 </odoo>

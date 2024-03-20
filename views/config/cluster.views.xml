@@ -31,7 +31,8 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_cluster_view_tree" model="ir.ui.view">
+        <record
+            id="humanitarian_cluster_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.cluster.view.tree</field>
             <field name="model">humanitarian.cluster</field>
             <field name="arch" type="xml">
@@ -45,7 +46,8 @@
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_cluster_action" model="ir.actions.act_window">
+        <record
+            id="humanitarian_cluster_action" model="ir.actions.act_window">
             <field name="name">Cluster</field>
             <field name="res_model">humanitarian.cluster</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
@@ -55,9 +57,8 @@
                 </p>
             </field>
         </record>
-
-        <!-- Menu Item -->
-        <menuitem id="cluster_id" name="Cluster" parent="humanitarian_config"
-            action="humanitarian_cluster_action" sequence="14" />
+        Menu Item <menuitem id="cluster_id" name="Cluster" parent="humanitarian_distrep"
+            action="humanitarian_cluster_action"
+            sequence="1" />
     </data>
 </odoo>

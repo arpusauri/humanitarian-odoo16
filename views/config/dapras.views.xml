@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="site_id" />
+                                                <field name="kerusakan" />
                                             </h2>
                                         </div>
                                     </div>
@@ -55,7 +55,8 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="dampaksarpras" name="Dampak Sarpras" parent="humanitarian_config"
-            action="humanitarian_dampaksarpras_action" sequence="7" />
+        <menuitem id="dampaksarpras" name="Dampak SarPras" parent="humanitarian_sitrep"
+            action="humanitarian_dampaksarpras_action"
+            sequence="1" />
     </data>
 </odoo>

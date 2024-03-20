@@ -1,45 +1,35 @@
 <odoo>
     <data>
-        <!-- Kanban View -->
-        <record id="humanitarian_distrep_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.distrep.view.kanban</field>
+        <!-- Form View -->
+        <record id="humanitarian_distrep_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.distrep.view.form</field>
             <field name="model">humanitarian.distrep</field>
             <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="sitrep_id" />
-                                            </h2>
-                                            <div>Nama Kejadian:<field name="distrep_id"></field></div>
-                                            <div>PIC:<field name="pic"></field></div>
-                                            <div>Provinsi:<field name="province_id"></field></div>
-                                            <div>Kota/Kabupaten:<field name="city_id"></field></div>
-                                            <div>Kecamatan:<field name="district_id"></field></div>
-                                            <div>Desa:<field name="subdistrict_id"></field></div>
-                                            <div>Alamat:<field name="alamat_lengkap"></field></div>
-                                            <div>Latitude:<field name="latitude"></field></div>
-                                            <div>Longitude:<field name="longitude"></field></div>
-                                            <div>State:<field name="state"></field></div>
-                                            <div>No. SPK:<field name="no_spk"></field></div>
-                                            <div>Tanggal Penyaluran:<field name="tanggal_penyaluran"></field></div>
-                                            <div>Jumlah PM:<field name="jml_pm" widget="integer"></field></div>
-                                            <div>Jumlah Relawan:<field name="jml_relawan"
-                                                    widget="integer"></field></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
+                <form string="Distrep Items">
+                    <sheet>
+                        <group string="Informasi Kejadian">
+                            <field name="sitrep_id"></field>
+                            <field name="distrep_id"></field>
+                            <field name="pic"></field>
+                        </group>
+                        <group string="Informasi Lokasi">
+                                <field name="province_id"></field>
+                                <field name="city_id"></field>
+                                <field name="district_id"></field>
+                                <field name="subdistrict_id"></field>
+                                <field name="alamat_lengkap"></field>
+                                <field name="latitude"></field>
+                                <field name="longitude"></field>
+                            </group>
+                        <group string="Informasi Lainnya">
+                            <field name="state"></field>
+                            <field name="no_spk"></field>
+                            <field name="tanggal_penyaluran"></field>
+                            <field name="jml_pm"></field>
+                            <field name="jml_relawan"></field>
+                        </group>
+                    </sheet>
+                </form>
             </field>
         </record>
 
@@ -68,51 +58,6 @@
             </field>
         </record>
 
-        <!-- Form View -->
-        <record id="humanitarian_distrep_view_form" model="ir.ui.view">
-            <field name="name">humanitarian.distrep.view.form</field>
-            <field name="model">humanitarian.distrep</field>
-            <field name="arch" type="xml">
-                <form string="Distrep Items">
-                    <sheet>
-                        <notebook>
-                            <page string="Nama Kejadian">
-                                <group>
-                                    <field name="sitrep_id"></field>
-                                    <field name="distrep_id"></field>
-                                    <field name="pic"></field>
-                                </group>
-                            </page>
-                            <page string="Lokasi">
-                                <group>
-                                    <group>
-                                        <field name="province_id"></field>
-                                        <field name="city_id"></field>
-                                        <field name="district_id"></field>
-                                        <field name="subdistrict_id"></field>
-                                    </group>
-                                    <group>
-                                        <field name="alamat_lengkap"></field>
-                                        <field name="latitude"></field>
-                                        <field name="longitude"></field>
-                                    </group>
-                                </group>
-                            </page>
-                            <page string="Details">
-                                <group>
-                                    <field name="state"></field>
-                                    <field name="no_spk"></field>
-                                    <field name="tanggal_penyaluran"></field>
-                                    <field name="jml_pm"></field>
-                                    <field name="jml_relawan"></field>
-                                </group>
-                            </page>
-                        </notebook>
-                    </sheet>
-                </form>
-            </field>
-        </record>
-
         <!-- View Action -->
         <record id="humanitarian_distrep_action" model="ir.actions.act_window">
             <field name="name">Distribution Report</field>
@@ -127,6 +72,6 @@
 
         <!-- Menu Item -->
         <menuitem id="distrep" name="Distribution Report" parent="humanitarian_root"
-            action="humanitarian_distrep_action" sequence="2" />
+            action="humanitarian_distrep_action" sequence="3" />
     </data>
 </odoo>

@@ -15,3 +15,4 @@ from . import sitrep_pengungsi
 from . import sitrep_kebutuhanmendesak
 from . import sitrep_documentation
 from . import dampaksarpras
+from . import user

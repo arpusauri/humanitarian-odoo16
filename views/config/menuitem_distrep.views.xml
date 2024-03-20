@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="humanitarian_distrep" name="Dist Rep" parent="humanitarian_config"
+            sequence="5" />
+    </data>
+</odoo>

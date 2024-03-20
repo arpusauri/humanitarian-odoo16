@@ -52,7 +52,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="district" name="Kecamatand" parent="humanitarian_config"
+        <menuitem id="district" name="Kecamatan" parent="humanitarian_location"
             action="humanitarian_district_action" sequence="3" />
     </data>
 </odoo>

@@ -1,0 +1,6 @@
+<odoo>
+    <data>
+        <menuitem id="humanitarian_sitrep" name="Site Rep" parent="humanitarian_config"
+            sequence="4" />
+    </data>
+</odoo>

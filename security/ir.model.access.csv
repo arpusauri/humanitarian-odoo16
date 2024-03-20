@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_humanitarian_user,access_humanitarian_user,model_humanitarian_user,base.group_user,1,1,1,1
 access_humanitarian_cluster,access_humanitarian_cluster,model_humanitarian_cluster,base.group_user,1,1,1,1
 access_humanitarian_mitra,access_humanitarian_mitra,model_humanitarian_mitra,base.group_user,1,1,1,1
 access_humanitarian_pic,access_humanitarian_pic,model_humanitarian_pic,base.group_user,1,1,1,1

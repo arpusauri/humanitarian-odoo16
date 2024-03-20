@@ -29,7 +29,8 @@
         </record>
 
         <!-- Tree View -->
-        <record id="humanitarian_mitra_view_tree" model="ir.ui.view">
+        <record
+            id="humanitarian_mitra_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.mitra.view.tree</field>
             <field name="model">humanitarian.mitra</field>
             <field name="arch" type="xml">
@@ -40,7 +41,8 @@
         </record>
 
         <!-- View Action -->
-        <record id="humanitarian_mitra_action" model="ir.actions.act_window">
+        <record
+            id="humanitarian_mitra_action" model="ir.actions.act_window">
             <field name="name">Mitra</field>
             <field name="res_model">humanitarian.mitra</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
@@ -50,9 +52,7 @@
                 </p>
             </field>
         </record>
-
-        <!-- Menu Item -->
-        <menuitem id="mitra" name="Mitra" parent="humanitarian_config"
-            action="humanitarian_mitra_action" sequence="13" />
+        Menu Item <menuitem id="mitra" name="Mitra" parent="humanitarian_distrep"
+            action="humanitarian_mitra_action" sequence="1" />
     </data>
 </odoo>

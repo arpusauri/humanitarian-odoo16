@@ -53,7 +53,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="distrep_documentation" name="Dokumentasi Distribution Report" parent="humanitarian_config"
-            action="humanitarian_distrep_documentation_action" sequence="15" />
+        <menuitem id="distrep_documentation" name="Dokumentasi" parent="humanitarian_distrep"
+            action="humanitarian_distrep_documentation_action" sequence="3" />
     </data>
 </odoo>

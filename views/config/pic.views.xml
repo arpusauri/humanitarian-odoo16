@@ -54,6 +54,6 @@
         <!-- Menu Item -->
         <menuitem id="pic" name="PIC Lapangan" parent="humanitarian_config"
             action="humanitarian_pic_action"
-            sequence="6" />
+            sequence="3" />
     </data>
 </odoo>

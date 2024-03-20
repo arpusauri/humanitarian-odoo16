@@ -52,7 +52,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="province" name="Provinsi" parent="humanitarian_config"
+        <menuitem id="province" name="Provinsi" parent="humanitarian_location"
             action="humanitarian_province_action"
             sequence="1" />
     </data>

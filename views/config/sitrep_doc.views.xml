@@ -53,7 +53,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="sitrep_documentation" name="Dokumentasi Site Report" parent="humanitarian_config"
-            action="humanitarian_sitrep_documentation_action" sequence="12" />
+        <menuitem id="sitrep_documentation" name="Dokumentasi" parent="humanitarian_sitrep"
+            action="humanitarian_sitrep_documentation_action" sequence="6" />
     </data>
 </odoo>

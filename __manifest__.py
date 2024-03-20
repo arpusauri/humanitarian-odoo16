@@ -21,9 +21,13 @@
         'data': [
             'security/ir.model.access.csv',
             'views/menuitem_humanitarian.views.xml',
+            'views/user/user.views.xml',
             'views/distrep/distrep.views.xml',
             'views/sitrep/sitrep.views.xml',
             'views/config/menuitem_config.views.xml',
+            'views/config/menuitem_location.views.xml',
+            'views/config/menuitem_distrep.views.xml',
+            'views/config/menuitem_sitrep.views.xml',
             'views/config/cluster.views.xml',
             'views/config/mitra.views.xml',
             'views/config/pic.views.xml',

@@ -8,7 +8,7 @@
                 <form string="">
                     <sheet>
                         <notebook>
-                            <page string="Nama Kejadian">
+                            <page string="Detail Kejadian">
                                 <group string="Informasi Kejadian">
                                     <field name="jenis_kejadian"></field>
                                     <field name="nama_kejadian"></field>
@@ -118,6 +118,6 @@
 
         <!-- Menu Item -->
         <menuitem id="sitrep" name="Site Report" parent="humanitarian_root"
-            action="humanitarian_sitrep_action" sequence="1" />
+            action="humanitarian_sitrep_action" sequence="2" />
     </data>
 </odoo>

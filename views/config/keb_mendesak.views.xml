@@ -55,7 +55,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="kebutuhan_mendesak" name="Kebutuhan Mendesak" parent="humanitarian_config"
-            action="humanitarian_kebutuhan_mendesak_action" sequence="11" />
+        <menuitem id="kebutuhan_mendesak" name="Kebutuhan Mendesak" parent="humanitarian_sitrep"
+            action="humanitarian_kebutuhan_mendesak_action" sequence="5" />
     </data>
 </odoo>
