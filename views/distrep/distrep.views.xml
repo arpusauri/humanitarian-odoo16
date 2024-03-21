@@ -39,21 +39,21 @@
             <field name="model">humanitarian.distrep</field>
             <field name="arch" type="xml">
                 <tree string="Distribution Reports">
-                    <field name="sitrep_id"></field>
-                    <field name="distrep_id"></field>
-                    <field name="pic"></field>
-                    <field name="province_id"></field>
-                    <field name="city_id"></field>
-                    <field name="district_id"></field>
-                    <field name="subdistrict_id"></field>
-                    <field name="alamat_lengkap"></field>
-                    <field name="latitude"></field>
-                    <field name="longitude"></field>
-                    <field name="state"></field>
-                    <field name="no_spk"></field>
-                    <field name="tanggal_penyaluran"></field>
-                    <field name="jml_pm"></field>
-                    <field name="jml_relawan"></field>
+                    <field name="sitrep_id" optional='show'></field>
+                    <field name="distrep_id" optional='show'></field>
+                    <field name="pic" optional='show'></field>
+                    <field name="province_id" optional='show'></field>
+                    <field name="city_id" optional='show'></field>
+                    <field name="district_id" optional='show'></field>
+                    <field name="subdistrict_id" optional='show'></field>
+                    <field name="alamat_lengkap" optional='show'></field>
+                    <field name="latitude" optional='show'></field>
+                    <field name="longitude" optional='show'></field>
+                    <field name="state" optional='show'></field>
+                    <field name="no_spk" optional='hide'></field>
+                    <field name="tanggal_penyaluran" optional='hide'></field>
+                    <field name="jml_pm" optional='hide'></field>
+                    <field name="jml_relawan" optional='hide'></field>
                 </tree>
             </field>
         </record>
