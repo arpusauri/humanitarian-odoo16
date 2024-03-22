@@ -16,7 +16,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="site_id" />
+                                                <field name="doc_site_id" />
                                             </h2>
                                         </div>
                                     </div>
@@ -35,7 +35,7 @@
             <field name="arch" type="xml">
                 <tree string="Lokasi Terdampak Details">
                     <field name="image" widget="image"></field>
-                    <field name="site_id"></field>
+                    <field name="doc_site_id"></field>
                 </tree>
             </field>
         </record>

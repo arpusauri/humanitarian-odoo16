@@ -9,5 +9,5 @@ class User(models.Model):
     email = fields.Char(string="Email")
     id_card = fields.Char(string="ID Card")
     id_google = fields.Char(string="ID Google")
-    picture_url = fields.Char(string="ID")
+    picture_url = fields.Char(string="Picture URL")
     active = fields.Boolean(string="Active")

@@ -1,5 +1,21 @@
 <odoo>
     <data>
+        <!-- Form View -->
+        <record id="humanitarian_pengungsi_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.pengungsi.view.form</field>
+            <field name="model">humanitarian.pengungsi</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="lokasi_pengungsian"></field>
+                            <field name="site_id"></field>
+                            <field name="jumlah"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Kanban View -->
         <record id="humanitarian_pengungsi_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.pengungsi.view.kanban</field>

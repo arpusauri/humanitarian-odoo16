@@ -29,16 +29,46 @@
                                 </group>
                             </page>
                             <page string="PIC Lapangan">
+                                <group name="name" string="Informasi PIC">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="pic"></field>
+                                </tree>
                             </page>
                             <page string="Dampak Sarpras">
+                                <group name="name" string="Informasi Dampak SarPras">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="dampak_site_id"></field>
+                                </tree>
                             </page>
                             <page string="Lokasi Terdampak">
+                                <group name="name" string="Informasi Lokasi Terdampak">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="lokasi_site_id"></field>
+                                </tree>
                             </page>
                             <page string="Jumlah Korban">
+                                <group name="name" string="Informasi Jumlah Korban">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="korban_site_id"></field>
+                                </tree>
                             </page>
                             <page string="Kebutuhan Mendesak">
+                                <group name="name" string="Informasi Kebutuhan Mendesak">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="kebutuhan_site_id"></field>
+                                </tree>
                             </page>
                             <page string="Dokumentasi Site Report">
+                                <group name="name" string="Dokumentasi Site Report">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="doc_site_id"></field>
+                                </tree>
                             </page>
                         </notebook>
                     </sheet>

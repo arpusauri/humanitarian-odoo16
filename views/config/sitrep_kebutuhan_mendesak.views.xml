@@ -1,5 +1,22 @@
 <odoo>
     <data>
+        <!-- Form View -->
+        <record id="humanitarian_kebutuhan_mendesak_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.kebutuhan_mendesak.view.form</field>
+            <field name="model">humanitarian.kebutuhan_mendesak</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="kebutuhan_mendesak"></field>
+                            <field name="kebutuhan_site_id"></field>
+                            <field name="jumlah"></field>
+                            <field name="satuan"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Kanban View -->
         <record id="humanitarian_kebutuhan_mendesak_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.kebutuhan_mendesak.view.kanban</field>
@@ -35,7 +52,7 @@
             <field name="arch" type="xml">
                 <tree string="Kebutuhan Mendesak Details">
                     <field name="kebutuhan_mendesak"></field>
-                    <field name="site_id"></field>
+                    <field name="kebutuhan_site_id"></field>
                     <field name="jumlah"></field>
                     <field name="satuan"></field>
                 </tree>

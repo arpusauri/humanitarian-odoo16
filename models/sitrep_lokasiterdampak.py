@@ -5,7 +5,7 @@ class LokasiTerdampak(models.Model):
     _description = 'Lokasi Terdampak'
 
     district_id = fields.Many2one('humanitarian.district', string='District')
-    site_id = fields.Many2one('humanitarian.sitrep', string='Situation')
+    lokasi_site_id = fields.Many2one('humanitarian.sitrep', string='Situation')
     jumlah = fields.Integer(string="Jumlah")
     
     

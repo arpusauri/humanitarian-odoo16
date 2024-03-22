@@ -1,5 +1,22 @@
 <odoo>
     <data>
+        <!-- Form View -->
+        <record id="humanitarian_dampaksarpras_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.dampaksarpras.view.form</field>
+            <field name="model">humanitarian.dampaksarpras</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="dampak_site_id"></field>
+                            <field name="kerusakan"></field>
+                            <field name="jumlah"></field>
+                            <field name="satuan"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Kanban View -->
         <record id="humanitarian_dampaksarpras_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.dampaksarpras.view.kanban</field>
@@ -35,7 +52,7 @@
             <field name="arch" type="xml">
                 <tree string="Dampak Sarpras Details">
                     <field name="kerusakan"></field>
-                    <field name="site_id"></field>
+                    <field name="dampak_site_id"></field>
                     <field name="jumlah"></field>
                     <field name="satuan"></field>
                 </tree>
