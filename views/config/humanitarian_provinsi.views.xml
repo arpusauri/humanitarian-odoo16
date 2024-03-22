@@ -1,8 +1,23 @@
 <odoo>
     <data>
+        <!-- Form View-->
+        <record id="ambulance_provinsi_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.province.view.form</field>
+            <field name="model">humanitarian.province</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="prov" />
+                            <field name="kdprov" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Kanban View -->
         <record id="humanitarian_province_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.province_id.view.kanban</field>
+            <field name="name">humanitarian.province.view.kanban</field>
             <field name="model">humanitarian.province</field>
             <field name="arch" type="xml">
                 <kanban>
@@ -16,7 +31,8 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="province_id" />
+                                                <field name="prov" />
+                                                <field name="kdprov" />
                                             </h2>
                                         </div>
                                     </div>
@@ -27,14 +43,14 @@
                 </kanban>
             </field>
         </record>
-
         <!-- Tree View -->
         <record id="humanitarian_province_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.province.view.tree</field>
             <field name="model">humanitarian.province</field>
             <field name="arch" type="xml">
                 <tree string="Province Details">
-                    <field name="province_id"></field>
+                    <field name="prov" />
+                    <field name="kdprov" />
                 </tree>
             </field>
         </record>

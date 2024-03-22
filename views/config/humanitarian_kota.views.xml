@@ -1,6 +1,6 @@
 <odoo>
     <data>
-
+        <!-- Form View -->
         <record id="humanitarian_city_view_form" model="ir.ui.view">
             <field name="name">humanitarian.city.view.form</field>
             <field name="model">humanitarian.city</field>
@@ -8,13 +8,15 @@
                 <form string="City Items">
                     <sheet>
                         <group>
-                            <field name="city_id"></field>
+                            <field name="province" />
+                            <field name="kdprov" />
+                            <field name="kota" />
+                            <field name="kdkota" />
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-
         <!-- Kanban View -->
         <record id="humanitarian_city_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.city.view.kanban</field>
@@ -31,7 +33,10 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="city_id" />
+                                                <field name="province" />
+                                                <field name="kdprov" />
+                                                <field name="kota" />
+                                                <field name="kdkota" />
                                             </h2>
                                         </div>
                                     </div>
@@ -42,18 +47,19 @@
                 </kanban>
             </field>
         </record>
-
         <!-- Tree View -->
         <record id="humanitarian_city_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.city.view.tree</field>
             <field name="model">humanitarian.city</field>
             <field name="arch" type="xml">
                 <tree string="city Details">
-                    <field name="city_id"></field>
+                    <field name="province" />
+                    <field name="kdprov" />
+                    <field name="kota" />
+                    <field name="kdkota" />
                 </tree>
             </field>
         </record>
-
         <!-- View Action -->
         <record id="humanitarian_city_action" model="ir.actions.act_window">
             <field name="name">City</field>
@@ -65,7 +71,6 @@
                 </p>
             </field>
         </record>
-
         <!-- Menu Item -->
         <menuitem id="city" name="Kota" parent="humanitarian_location"
             action="humanitarian_city_action" sequence="2" />

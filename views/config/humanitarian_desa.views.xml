@@ -1,5 +1,25 @@
 <odoo>
     <data>
+        <!-- Form View -->
+        <record id="ambulance_kec_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.subdistrict.view.form</field>
+            <field name="model">humanitarian.district</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="provinsi_id" />
+                            <field name="city" />
+                            <field name="kdkota" readonly="1" force_save="1" />
+                            <field name="kec" />
+                            <field name="kdkec" readonly="1" force_save="1" />
+                            <field name="kel" />
+                            <field name="kdkel" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Kanban View -->
         <record id="humanitarian_subdistrict_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.subdistrict.view.kanban</field>
@@ -16,7 +36,13 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="subdistrict_id" />
+                                                <field name="provinsi_id" />
+                                                <field name="kota" />
+                                                <field name="kdkota" readonly="1" force_save="1" />
+                                                <field name="kec" />
+                                                <field name="kdkec" readonly="1" force_save="1" />
+                                                <field name="kel" />
+                                                <field name="kdkel" />
                                             </h2>
                                         </div>
                                     </div>
@@ -27,18 +53,20 @@
                 </kanban>
             </field>
         </record>
-
         <!-- Tree View -->
         <record id="humanitarian_subdistrict_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.subdistrict.view.tree</field>
             <field name="model">humanitarian.subdistrict</field>
             <field name="arch" type="xml">
-                <tree string="subdistrict Details">
-                    <field name="subdistrict_id"></field>
+                <tree string="subdistrict Details" limit="25">
+                    <field name="provinsi_id" optional="show" />
+                    <field name="kota" optional="show" />
+                    <field name="kec" optional="show" />
+                    <field name="kdkel" optional="show" />
+                    <field name="kel" optional="show" />
                 </tree>
             </field>
         </record>
-
         <!-- View Action -->
         <record id="humanitarian_subdistrict_action" model="ir.actions.act_window">
             <field name="name">Subdistrict</field>
@@ -50,7 +78,6 @@
                 </p>
             </field>
         </record>
-
         <!-- Menu Item -->
         <menuitem id="subdistrict" name="Desa" parent="humanitarian_location"
             action="humanitarian_subdistrict_action" sequence="4" />
