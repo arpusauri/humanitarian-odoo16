@@ -10,7 +10,7 @@ class District(models.Model):
     city = fields.Many2one(comodel_name='humanitarian.city', string='Kota', required=False)
     kel = fields.Many2one(comodel_name='humanitarian.subdistrict', string='Desa', required=False)
     kdkel = fields.Many2one(comodel_name='humanitarian.subdistrict', string='Kode Desa', required=False)
-    provinsi_id = fields.Many2one(comodel_name='humanitarian.province', string='Provinsi', required=False)
+    provinsi = fields.Many2one(comodel_name='humanitarian.province', string='Provinsi', required=False)
     kdkota = fields.Char(string="Kode Kota", size=16, required=False)
 
     @api.onchange('city')

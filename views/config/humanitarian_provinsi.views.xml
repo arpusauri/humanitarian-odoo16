@@ -54,10 +54,9 @@
                 </tree>
             </field>
         </record>
-
         <!-- View Action -->
         <record id="humanitarian_province_action" model="ir.actions.act_window">
-            <field name="name">Province</field>
+            <field name="name">Provinsi</field>
             <field name="res_model">humanitarian.province</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">

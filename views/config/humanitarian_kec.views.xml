@@ -8,7 +8,7 @@
                 <form string="">
                     <sheet>
                         <group>
-                            <field name="provinsi_id" />
+                            <field name="provinsi" />
                             <field name="city" />
                             <field name="kdkota" />
                             <field name="kec" />
@@ -34,7 +34,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="provinsi_id" />
+                                                <field name="provinsi" />
                                                 <field name="city" />
                                                 <field name="kdkota" />
                                                 <field name="kec" />
@@ -55,7 +55,7 @@
             <field name="model">humanitarian.district</field>
             <field name="arch" type="xml">
                 <tree limit="25">
-                    <field name="provinsi_id" />
+                    <field name="provinsi" />
                     <field name="city" />
                     <field name="kec" />
                 </tree>
@@ -63,7 +63,7 @@
         </record>
         <!-- View Action -->
         <record id="humanitarian_district_action" model="ir.actions.act_window">
-            <field name="name">District</field>
+            <field name="name">Kecamatan</field>
             <field name="res_model">humanitarian.district</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">

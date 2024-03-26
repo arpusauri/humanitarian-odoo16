@@ -10,64 +10,64 @@
                         <notebook>
                             <page string="Detail Kejadian">
                                 <group string="Informasi Kejadian">
-                                    <field name="jenis_kejadian"></field>
-                                    <field name="nama_kejadian"></field>
+                                    <field name="jenis_kejadian" />
+                                    <field name="nama_kejadian" />
                                 </group>
                                 <group string="Informasi Lokasi">
                                     <group>
-                                        <field name="province_id"></field>
-                                        <field name="city_id"></field>
-                                        <field name="district_id"></field>
-                                        <field name="subdistrict_id"></field>
-                                        <field name="alamat_lengkap"></field>
-                                        <field name="latitude"></field>
-                                        <field name="longitude"></field>
+                                        <field name="province_id" />
+                                        <field name="city_id" />
+                                        <field name="district_id" />
+                                        <field name="subdistrict_id" />
+                                        <field name="alamat_lengkap" />
+                                        <field name="latitude" />
+                                        <field name="longitude" />
                                     </group>
                                 </group>
                                 <group string="Informasi State">
-                                    <field name="state"></field>
+                                    <field name="state" />
                                 </group>
                             </page>
                             <page string="PIC Lapangan">
                                 <group name="name" string="Informasi PIC">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="pic_id"></field>
+                                    <field name="pic" />
                                 </tree>
                             </page>
                             <page string="Dampak Sarpras">
                                 <group name="name" string="Informasi Dampak SarPras">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="dampak_site_id"></field>
+                                    <field name="dampak_site_id" />
                                 </tree>
                             </page>
                             <page string="Lokasi Terdampak">
                                 <group name="name" string="Informasi Lokasi Terdampak">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="lokasi_site_id"></field>
+                                    <field name="lokasi_site_id" />
                                 </tree>
                             </page>
                             <page string="Jumlah Korban">
                                 <group name="name" string="Informasi Jumlah Korban">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="korban_site_id"></field>
+                                    <field name="korban_site_id" />
                                 </tree>
                             </page>
                             <page string="Kebutuhan Mendesak">
                                 <group name="name" string="Informasi Kebutuhan Mendesak">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="kebutuhan_site_id"></field>
+                                    <field name="kebutuhan_site_id" />
                                 </tree>
                             </page>
                             <page string="Dokumentasi Site Report">
                                 <group name="name" string="Dokumentasi Site Report">
                                 </group>
                                 <tree editable="bottom">
-                                    <field name="doc_site_id"></field>
+                                    <field name="doc_site_id" />
                                 </tree>
                             </page>
                         </notebook>
@@ -94,16 +94,16 @@
                                             <h2>
                                                 <field name="jenis_kejadian" />
                                             </h2>
-                                            <div>Nama Kejadian:<field name="nama_kejadian"></field></div>
-                                            <div>PIC:<field name="pic_id"></field></div>
-                                            <div>Provinsi:<field name="province_id"></field></div>
-                                            <div>Kota/Kabupaten:<field name="city_id"></field></div>
-                                            <div>Kecamatan:<field name="district_id"></field></div>
-                                            <div>Desa:<field name="subdistrict_id"></field></div>
-                                            <div>Alamat Lengkap:<field name="alamat_lengkap"></field></div>
-                                            <div>Latitude:<field name="latitude"></field></div>
-                                            <div>Longitude:<field name="longitude"></field></div>
-                                            <div>State:<field name="state"></field></div>
+                                            <div>Nama Kejadian:<field name="nama_kejadian" /></div>
+                                            <div>PIC:<field name="pic" /></div>
+                                            <div>Provinsi:<field name="province_id" /></div>
+                                            <div>Kota/Kabupaten:<field name="city_id" /></div>
+                                            <div>Kecamatan:<field name="district_id" /></div>
+                                            <div>Desa:<field name="subdistrict_id" /></div>
+                                            <div>Alamat Lengkap:<field name="alamat_lengkap" /></div>
+                                            <div>Latitude:<field name="latitude" /></div>
+                                            <div>Longitude:<field name="longitude" /></div>
+                                            <div>State:<field name="state" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -120,20 +120,19 @@
             <field name="model">humanitarian.sitrep</field>
             <field name="arch" type="xml">
                 <tree string="Situation Reports">
-                    <field name="jenis_kejadian"></field>
-                    <field name="nama_kejadian"></field>
-                    <field name="province_id"></field>
-                    <field name="city_id"></field>
-                    <field name="district_id"></field>
-                    <field name="subdistrict_id"></field>
-                    <field name="alamat_lengkap"></field>
-                    <field name="latitude"></field>
-                    <field name="longitude"></field>
-                    <field name="state"></field>
+                    <field name="jenis_kejadian" />
+                    <field name="nama_kejadian" />
+                    <field name="province_id" />
+                    <field name="city_id" />
+                    <field name="district_id" />
+                    <field name="subdistrict_id" />
+                    <field name="alamat_lengkap" />
+                    <field name="latitude" />
+                    <field name="longitude" />
+                    <field name="state" />
                 </tree>
             </field>
         </record>
-
         <!-- View Action -->
         <record id="humanitarian_sitrep_action" model="ir.actions.act_window">
             <field name="name">Site Report</field>
@@ -145,7 +144,6 @@
                 </p>
             </field>
         </record>
-
         <!-- Menu Item -->
         <menuitem id="sitrep" name="Site Report" parent="humanitarian_root"
             action="humanitarian_sitrep_action" sequence="2" />

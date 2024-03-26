@@ -42,7 +42,7 @@
 
         <!-- View Action -->
         <record id="humanitarian_sitrep_documentation_action" model="ir.actions.act_window">
-            <field name="name">Dokumentasi</field>
+            <field name="name">Dokumentasi Site Report</field>
             <field name="res_model">humanitarian.sitrep_documentation</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">

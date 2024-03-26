@@ -62,7 +62,7 @@
         </record>
         <!-- View Action -->
         <record id="humanitarian_city_action" model="ir.actions.act_window">
-            <field name="name">City</field>
+            <field name="name">Kota</field>
             <field name="res_model">humanitarian.city</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
