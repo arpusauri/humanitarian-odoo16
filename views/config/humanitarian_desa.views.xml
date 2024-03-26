@@ -8,8 +8,8 @@
                 <form string="">
                     <sheet>
                         <group>
-                            <field name="provinsi" />
-                            <field name="city" />
+                            <field name="provinsi" domain="[('province','=', province_id)]" />
+                            <field name="city" domain="[('city','=', city_id)]" />
                             <field name="kdkota" readonly="1" force_save="1" />
                             <field name="kec" />
                             <field name="kdkec" readonly="1" force_save="1" />
