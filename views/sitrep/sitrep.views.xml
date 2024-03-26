@@ -16,9 +16,11 @@
                                 <group string="Informasi Lokasi">
                                     <group>
                                         <field name="province_id" />
-                                        <field name="city_id" />
-                                        <field name="district_id" />
-                                        <field name="subdistrict_id" />
+                                        <field name="city_id"
+                                            domain="[('province','=', province_id)]" />
+                                        <field name="district_id" domain="[('city','=', city_id)]" />
+                                        <field name="subdistrict_id"
+                                            domain="[('district','=', district_id)]" />
                                         <field name="alamat_lengkap" />
                                         <field name="latitude" />
                                         <field name="longitude" />

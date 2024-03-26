@@ -9,10 +9,10 @@ class Sitrep(models.Model):
     nama_kejadian = fields.Char(string='Nama Kejadian')
     jumlah = fields.Many2one('humanitarian.sitrep_lokasiterdampak', string='Jumlah')
     
-    province_id =  fields.Many2one(comodel_name='humanitarian.province',  string = 'Provinsi')
-    city_id =  fields.Many2one(comodel_name='humanitarian.city', domain="[('province','=', province_id)]", string = 'Kota')
-    district_id = fields.Many2one(comodel_name='humanitarian.district', domain="[('city','=', city_id)]", string = 'Kecamatan')
-    subdistrict_id =  fields.Many2one(comodel_name='humanitarian.subdistrict', domain="[('district','=', district_id)]", string = 'Desa')
+    province_id =  fields.Many2one(comodel_name='humanitarian.province', string = 'Provinsi')
+    city_id =  fields.Many2one(comodel_name='humanitarian.city', string = 'Kota')
+    district_id = fields.Many2one(comodel_name='humanitarian.district', string = 'Kecamatan')
+    subdistrict_id =  fields.Many2one(comodel_name='humanitarian.subdistrict', string = 'Desa')
 
     alamat_lengkap = fields.Text(string='Alamat Lengkap')
     latitude = fields.Text(string='Latitude')
