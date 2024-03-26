@@ -3,15 +3,15 @@
         <!-- Form View -->
         <record id="ambulance_kec_view_form" model="ir.ui.view">
             <field name="name">humanitarian.subdistrict.view.form</field>
-            <field name="model">humanitarian.district</field>
+            <field name="model">humanitarian.subdistrict</field>
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
                         <group>
-                            <field name="provinsi" domain="[('province','=', province_id)]" />
-                            <field name="city" domain="[('city','=', city_id)]" />
+                            <field name="provinsi" />
+                            <field name="kota" domain="[('province','=', provinsi)]" />
                             <field name="kdkota" readonly="1" force_save="1" />
-                            <field name="kec" />
+                            <field name="kec" domain="[('city','=', kota)]" />
                             <field name="kdkec" readonly="1" force_save="1" />
                             <field name="kel" />
                             <field name="kdkel" />
