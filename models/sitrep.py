@@ -11,7 +11,7 @@ class Sitrep(models.Model):
     province_id = fields.Many2one('humanitarian.province', string='Provinsi') 
     city_id = fields.Many2one('humanitarian.city', domain="[('province', '=', province_id)]", string="Kota/Kabupaten")
     district_id = fields.Many2one('humanitarian.district', domain="[('city','=', city_id)]", string="Kecamatan")
-    subdistrict_id = fields.Many2one('humanitarian.subdistrict' string="Desa")
+    subdistrict_id = fields.Many2one('humanitarian.subdistrict', string="Desa")
     alamat_lengkap = fields.Text(string="Alamat Lengkap")
     latitude = fields.Text(string="Latitude")
     longitude = fields.Text(string="Longitude")
