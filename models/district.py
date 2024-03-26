@@ -9,7 +9,7 @@ class District(models.Model):
     kdkec = fields.Char(string="Kode Kecamatan", size=16, required=False) 
     city = fields.Many2one(comodel_name='humanitarian.city', string='Kota', required=False)
     kel = fields.Many2one(comodel_name='humanitarian.subdistrict', string='Desa', required=False)
-    kdkel = fields.Char(comodel_namestring='Kode Desa', required=False)
+    kdkel = fields.Char(comodel_name='Kode Desa', required=False)
     provinsi = fields.Many2one(comodel_name='humanitarian.province', string='Provinsi', required=False)
     kdkota = fields.Char(string="Kode Kota", size=16, required=False)
 
