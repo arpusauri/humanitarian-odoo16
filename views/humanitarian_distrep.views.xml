@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+        <record id="humanitarian_distrep_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_distrep.view.form</field>
+            <field name="model">humanitarian.humanitarian_distrep</field>
+            <field name="arch" type="xml">
+                <form string="Distrep Items">
+                    <sheet>
+                        <notebook>
+                            <page string="Detail Kejadian">
+                                <group string="Informasi Kejadian">
+                                    <field name="sitrep_id" />
+                                    <field name="distrep_id" />
+                                    <field name="pic" />
+                                </group>
+                                <group string="Informasi Lokasi">
+                                    <field name="provinsi_id" />
+                                    <field name="kota_id"
+                                        domain="[('provinsi','=', provinsi_id)]" />
+                                    <field name="kec_id"
+                                        domain="[('kota','=', kota_id)]" />
+                                    <field name="kel_id"
+                                        domain="[('kec','=', kec_id)]" />
+                                    <field name="alamat_lengkap" />
+                                    <field name="latitude" />
+                                    <field name="longitude" />
+                                </group>
+                                <group string="Informasi Lainnya">
+                                    <field name="state" />
+                                    <field name="no_spk" />
+                                    <field name="tanggal_penyaluran" />
+                                    <field name="jml_pm" />
+                                    <field name="jml_relawan" />
+                                </group>
+                            </page>
+                            <page string="Cluster">
+                                <group name="name" string="Informasi Cluster">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="cluster_dist_id" />
+                                </tree>
+                            </page>
+                            <page string="Mitra">
+                                <group name="name" string="Informasi Mitra">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="mitra_dist_id" />
+                                </tree>
+                            </page>
+                            <page string="Dokumentasi">
+                                <group name="name" string="Dokumentasi Distribution Report">
+                                </group>
+                                <tree editable="bottom">
+                                    <field name="dok_dist_id" />
+                                </tree>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="humanitarian_distrep_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_distrep.view.tree</field>
+            <field name="model">humanitarian.humanitarian_distrep</field>
+            <field name="arch" type="xml">
+                <tree string="Distribution Reports">
+                    <field name="sitrep_id" optional='show' />
+                    <field name="distrep_id" optional='show' />
+                    <field name="pic" optional='show' />
+                    <field name="provinsi_id" optional='show' />
+                    <field name="kota_id" optional='show' />
+                    <field name="kec_id" optional='show' />
+                    <field name="kel_id" optional='show' />
+                    <field name="alamat_lengkap" optional='show' />
+                    <field name="latitude" optional='show' />
+                    <field name="longitude" optional='show' />
+                    <field name="state" optional='show' />
+                    <field name="no_spk" optional='hide' />
+                    <field name="tanggal_penyaluran" optional='hide' />
+                    <field name="jml_pm" optional='hide' />
+                    <field name="jml_relawan" optional='hide' />
+                </tree>
+            </field>
+        </record>
+        <record id="humanitarian_distrep_action" model="ir.actions.act_window">
+            <field name="name">Distribution Report</field>
+            <field name="res_model">humanitarian.humanitarian_distrep</field>
+            <field name="view_mode">tree,kanban,form,graph,pivot</field>
+            <field name="help" type="html">
+                <p class="0_view_nocontent_smiling_face">
+                    (Error) Data not found!
+                </p>
+            </field>
+        </record>
+        <menuitem id="distrep" name="Distribution Report" parent="humanitarian_root"
+            action="humanitarian_distrep_action" sequence="3" />
+    </data>
+</odoo>

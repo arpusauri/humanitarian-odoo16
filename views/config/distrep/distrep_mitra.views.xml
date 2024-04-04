@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <record id="humanitarian_jenis_kejadian_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_jenis_kejadian.view.kanban</field>
-            <field name="model">humanitarian.humanitarian_jenis_kejadian</field>
+        <record id="humanitarian_mitra_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.distrep_mitra.view.kanban</field>
+            <field name="model">humanitarian.distrep_mitra</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -15,7 +15,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="jenis_kejadian" />
+                                                <field name="mitra" />
                                             </h2>
                                         </div>
                                     </div>
@@ -26,18 +26,19 @@
                 </kanban>
             </field>
         </record>
-        <record id="humanitarian_jenis_kejadian_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_jenis_kejadian.view.tree</field>
-            <field name="model">humanitarian.humanitarian_jenis_kejadian</field>
+        <record id="humanitarian_mitra_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.distrep_mitra.view.tree</field>
+            <field name="model">humanitarian.distrep_mitra</field>
             <field name="arch" type="xml">
-                <tree string="Jenis Kejadian Details">
-                    <field name="jenis_kejadian" />
+                <tree string="Mitra Details">
+                    <field name="mitra" />
+                    <field name="mitra_dist_id" optional="hide" />
                 </tree>
             </field>
         </record>
-        <record id="humanitarian_jenis_kejadian_action" model="ir.actions.act_window">
-            <field name="name">Jenis Kejadian</field>
-            <field name="res_model">humanitarian.humanitarian_jenis_kejadian</field>
+        <record id="humanitarian_mitra_action" model="ir.actions.act_window">
+            <field name="name">Mitra</field>
+            <field name="res_model">humanitarian.distrep_mitra</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -45,7 +46,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="jenis_kejadian" name="Jenis Kejadian" parent="humanitarian_config"
-            action="humanitarian_jenis_kejadian_action" sequence="2" />
+        <menuitem id="distrep_mitra" name="Mitra" parent="humanitarian_distrep"
+            action="humanitarian_mitra_action" sequence="1" />
     </data>
 </odoo>

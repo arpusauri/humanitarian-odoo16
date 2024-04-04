@@ -1,15 +1,14 @@
 <odoo>
     <data>
-        <!-- Form View -->
-        <record id="ambulance_kec_view_form" model="ir.ui.view">
-            <field name="name">humanitarian.district.view.form</field>
-            <field name="model">humanitarian.district</field>
+        <record id="humanitarian_kec_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_kec.view.form</field>
+            <field name="model">humanitarian.humanitarian_kec</field>
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
                         <group>
                             <field name="provinsi" />
-                            <field name="city" />
+                            <field name="kota" />
                             <field name="kdkota" />
                             <field name="kec" />
                             <field name="kdkec" />
@@ -18,10 +17,9 @@
                 </form>
             </field>
         </record>
-        <!-- Kanban View -->
-        <record id="humanitarian_district_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.district.view.kanban</field>
-            <field name="model">humanitarian.district</field>
+        <record id="humanitarian_kec_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_kec.view.kanban</field>
+            <field name="model">humanitarian.humanitarian_kec</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -35,7 +33,7 @@
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
                                                 <field name="provinsi" />
-                                                <field name="city" />
+                                                <field name="kota" />
                                                 <field name="kdkota" />
                                                 <field name="kec" />
                                                 <field name="kdkec" />
@@ -49,22 +47,20 @@
                 </kanban>
             </field>
         </record>
-        <!-- Tree View -->
-        <record id="humanitarian_district_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.district.view.tree</field>
-            <field name="model">humanitarian.district</field>
+        <record id="humanitarian_kec_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_kec.view.tree</field>
+            <field name="model">humanitarian.humanitarian_kec</field>
             <field name="arch" type="xml">
-                <tree limit="25">
+                <tree string="Kecamatan Details" limit="25">
                     <field name="provinsi" />
-                    <field name="city" />
+                    <field name="kota" />
                     <field name="kec" />
                 </tree>
             </field>
         </record>
-        <!-- View Action -->
-        <record id="humanitarian_district_action" model="ir.actions.act_window">
+        <record id="humanitarian_kec_action" model="ir.actions.act_window">
             <field name="name">Kecamatan</field>
-            <field name="res_model">humanitarian.district</field>
+            <field name="res_model">humanitarian.humanitarian_kec</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -72,8 +68,7 @@
                 </p>
             </field>
         </record>
-        <!-- Menu Item -->
-        <menuitem id="district" name="Kecamatan" parent="humanitarian_location"
-            action="humanitarian_district_action" sequence="3" />
+        <menuitem id="kecamatan" name="Kecamatan" parent="humanitarian_location"
+            action="humanitarian_kec_action" sequence="3" />
     </data>
 </odoo>

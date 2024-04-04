@@ -1,22 +1,24 @@
 <odoo>
     <data>
-        <record id="humanitarian_provinsi_view_form" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_provinsi.view.form</field>
-            <field name="model">humanitarian.humanitarian_provinsi</field>
+        <record id="humanitarian_dampaksarpras_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_dampaksarpras.view.form</field>
+            <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
                         <group>
-                            <field name="provinsi" />
-                            <field name="kdprov" />
+                            <field name="dampak_site_id" />
+                            <field name="kerusakan" />
+                            <field name="jumlah" />
+                            <field name="satuan" />
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-        <record id="humanitarian_provinsi_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_provinsi.view.kanban</field>
-            <field name="model">humanitarian.humanitarian_provinsi</field>
+        <record id="humanitarian_dampaksarpras_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_dampaksarpras.view.kanban</field>
+            <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -29,8 +31,7 @@
                                         <div class="oe_kanban_content"
                                             style="color: #000; margin-left: 15px;">
                                             <h2>
-                                                <field name="provinsi" />
-                                                <field name="kdprov" />
+                                                <field name="kerusakan" />
                                             </h2>
                                         </div>
                                     </div>
@@ -41,19 +42,20 @@
                 </kanban>
             </field>
         </record>
-        <record id="humanitarian_provinsi_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_provinsi.view.tree</field>
-            <field name="model">humanitarian.humanitarian_provinsi</field>
+        <record id="humanitarian_dampaksarpras_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_dampaksarpras.view.tree</field>
+            <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
-                <tree string="Provinsi Details">
-                    <field name="provinsi" />
-                    <field name="kdprov" />
+                <tree string="Dampak Sarpras Details">
+                    <field name="kerusakan" />
+                    <field name="jumlah" />
+                    <field name="satuan" />
                 </tree>
             </field>
         </record>
-        <record id="humanitarian_provinsi_action" model="ir.actions.act_window">
-            <field name="name">Provinsi</field>
-            <field name="res_model">humanitarian.humanitarian_provinsi</field>
+        <record id="humanitarian_dampaksarpras_action" model="ir.actions.act_window">
+            <field name="name">Dampak Sarpras</field>
+            <field name="res_model">humanitarian.sitrep_dampaksarpras</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -61,8 +63,8 @@
                 </p>
             </field>
         </record>
-        <menuitem id="province" name="Provinsi" parent="humanitarian_location"
-            action="humanitarian_provinsi_action"
+        <menuitem id="dampaksarpras" name="Dampak SarPras" parent="humanitarian_sitrep"
+            action="humanitarian_dampaksarpras_action"
             sequence="1" />
     </data>
 </odoo>

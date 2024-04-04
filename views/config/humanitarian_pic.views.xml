@@ -1,9 +1,8 @@
 <odoo>
     <data>
-        <!-- Form View -->
         <record id="humanitarian_pic_view_form" model="ir.ui.view">
-            <field name="name">humanitarian.pic.view.form</field>
-            <field name="model">humanitarian.pic</field>
+            <field name="name">humanitarian.humanitarian_pic.view.form</field>
+            <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
@@ -14,10 +13,9 @@
                 </form>
             </field>
         </record>
-        <!-- Kanban View -->
         <record id="humanitarian_pic_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.pic.view.kanban</field>
-            <field name="model">humanitarian.pic</field>
+            <field name="name">humanitarian.humanitarian_pic.view.kanban</field>
+            <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
                 <kanban>
                     <templates>
@@ -40,22 +38,19 @@
                     </templates>
                 </kanban>
             </field>
-        </record>
-        <!-- Tree View -->
+        </record>=
         <record id="humanitarian_pic_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.pic.view.tree</field>
-            <field name="model">humanitarian.pic</field>
+            <field name="name">humanitarian.humanitarian_pic.view.tree</field>
+            <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
                 <tree string="PIC Details">
-                    <field name="pic"></field>
+                    <field name="pic" />
                 </tree>
             </field>
         </record>
-
-        <!-- View Action -->
         <record id="humanitarian_pic_action" model="ir.actions.act_window">
             <field name="name">PIC Lapangan</field>
-            <field name="res_model">humanitarian.pic</field>
+            <field name="res_model">humanitarian.humanitarian_pic</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
             <field name="help" type="html">
                 <p class="0_view_nocontent_smiling_face">
@@ -63,8 +58,6 @@
                 </p>
             </field>
         </record>
-
-        <!-- Menu Item -->
         <menuitem id="pic" name="PIC Lapangan" parent="humanitarian_config"
             action="humanitarian_pic_action"
             sequence="3" />
