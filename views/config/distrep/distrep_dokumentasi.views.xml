@@ -8,7 +8,6 @@
                     <sheet>
                         <group>
                             <field name="image" />
-                            <field name="image_url" />
                         </group>
                     </sheet>
                 </form>
@@ -46,7 +45,6 @@
             <field name="arch" type="xml">
                 <tree string="Distrep Dokumentasi Details">
                     <field name="image" widget="image" />
-                    <field name="image_url" />
                 </tree>
             </field>
         </record>
