@@ -4,7 +4,7 @@
             <field name="name">humanitarian.humanitarian_pic.view.form</field>
             <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form>
                     <sheet>
                         <group>
                             <field name="pic" />
@@ -17,20 +17,13 @@
             <field name="name">humanitarian.humanitarian_pic.view.kanban</field>
             <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit="25">
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="pic" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <field name="pic"></field>
                                     </div>
                                 </div>
                             </div>
@@ -43,7 +36,7 @@
             <field name="name">humanitarian.humanitarian_pic.view.tree</field>
             <field name="model">humanitarian.humanitarian_pic</field>
             <field name="arch" type="xml">
-                <tree string="PIC Details">
+                <tree string="PIC Details" limit="25">
                     <field name="pic" />
                 </tree>
             </field>

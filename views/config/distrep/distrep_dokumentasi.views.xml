@@ -4,10 +4,11 @@
             <field name="name">humanitarian.distrep_dokumentasi.view.form</field>
             <field name="model">humanitarian.distrep_dokumentasi</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form>
                     <sheet>
                         <group>
                             <field name="image" />
+                            <field name="dok_dist_id" readonly="1" />
                         </group>
                     </sheet>
                 </form>
@@ -17,20 +18,14 @@
             <field name="name">humanitarian.distrep_dokumentasi.view.kanban</field>
             <field name="model">humanitarian.distrep_dokumentasi</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit='25'>
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="image" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <field name="image" widget="image"></field>
+                                        <field name="dok_dist_id" />
                                     </div>
                                 </div>
                             </div>
@@ -43,8 +38,9 @@
             <field name="name">humanitarian.distrep_dokumentasi.view.tree</field>
             <field name="model">humanitarian.distrep_dokumentasi</field>
             <field name="arch" type="xml">
-                <tree string="Distrep Dokumentasi Details">
+                <tree string="Distrep Dokumentasi Details" limit="25">
                     <field name="image" widget="image" />
+                    <field name="dok_dist_id" />
                 </tree>
             </field>
         </record>
@@ -58,7 +54,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="distrep_dokumentasi" name="Dokumentasi" parent="humanitarian_distrep"
+        <menuitem id="distrep_dokumentasi" name="Dokumentasi Distribution Report" parent="humanitarian_distrep"
             action="humanitarian_distrep_dokumentasi_action" sequence="3" />
     </data>
 </odoo>

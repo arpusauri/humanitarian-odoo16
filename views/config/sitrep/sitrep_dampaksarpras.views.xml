@@ -62,7 +62,7 @@
             </field>
         </record>
         <menuitem id="sitrep_dampaksarpras" name="Dampak SarPras" parent="humanitarian_sitrep"
-            action="humanitarian_dampaksarpras_action"
+            action="humanitarian_sitrep_dampaksarpras_action"
             sequence="1" />
     </data>
 </odoo>

@@ -40,7 +40,7 @@
             <field name="arch" type="xml">
                 <tree string="Dokumentasi Sitrep Details" limit="25">
                     <field name="image" widget="image" />
-                    <field name="dok_site_id" optional="hide" />
+                    <field name="dok_site_id" />
                 </tree>
             </field>
         </record>

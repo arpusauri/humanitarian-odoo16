@@ -9,7 +9,7 @@
                         <group>
                             <field name="kec_id" />
                             <field name="jumlah" />
-                            <field name="lokasi_site_id" />
+                            <field name="lokasi_site_id" readonly="1" />
                         </group>
                     </sheet>
                 </form>

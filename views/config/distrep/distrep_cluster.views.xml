@@ -1,41 +1,37 @@
 <odoo>
     <data>
-        <record id="humanitarian_cluster_view_form" model="ir.ui.view">
+        <record id="humanitarian_distrep_cluster_view_form" model="ir.ui.view">
             <field name="name">humanitarian.distrep_cluster.view.form</field>
             <field name="model">humanitarian.distrep_cluster</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form>
                     <sheet>
                         <group>
                             <field name="cluster" />
                             <field name="program" />
                             <field name="jumlah" />
                             <field name="satuan" />
+                            <field name="cluster_dist_id" readonly="1" />
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-        <record id="humanitarian_cluster_view_kanban" model="ir.ui.view">
+        <record id="humanitarian_distrep_cluster_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.distrep_cluster.view.kanban</field>
             <field name="model">humanitarian.distrep_cluster</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit="25">
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="program" />
-                                            </h2>
-                                            <div>Cluster: <field name="cluster" /></div>
-                                            <div>Satuan: <field name="satuan" /></div>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <ul>
+                                            <li>Cluster : <field name="cluster" /></li>
+                                            <li>Program : <field name="program" /></li>
+                                            <li>Jumlah : <field name="jumlah" /></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -44,19 +40,20 @@
                 </kanban>
             </field>
         </record>
-        <record id="humanitarian_cluster_view_tree" model="ir.ui.view">
+        <record id="humanitarian_distrep_cluster_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.distrep_cluster.view.tree</field>
             <field name="model">humanitarian.distrep_cluster</field>
             <field name="arch" type="xml">
-                <tree string="Cluster Details">
+                <tree string="Cluster Details" limit="25">
                     <field name="cluster" />
                     <field name="program" />
                     <field name="jumlah" />
                     <field name="satuan" />
+                    <field name="cluster_dist_id" optional="hide" />
                 </tree>
             </field>
         </record>
-        <record id="humanitarian_cluster_action" model="ir.actions.act_window">
+        <record id="humanitarian_distrep_cluster_action" model="ir.actions.act_window">
             <field name="name">Cluster</field>
             <field name="res_model">humanitarian.distrep_cluster</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
@@ -66,8 +63,8 @@
                 </p>
             </field>
         </record>
-        <menuitem id="cluster_id" name="Cluster" parent="humanitarian_distrep"
-            action="humanitarian_cluster_action"
+        <menuitem id="distrep_cluster" name="Cluster" parent="humanitarian_distrep"
+            action="humanitarian_distrep_cluster_action"
             sequence="1" />
     </data>
 </odoo>

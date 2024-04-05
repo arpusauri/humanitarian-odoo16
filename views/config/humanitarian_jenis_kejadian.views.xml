@@ -1,23 +1,29 @@
 <odoo>
     <data>
+        <record id="humanitarian_jenis_kejadian_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_jenis_kejadian.view.kanban</field>
+            <field name="model">humanitarian.humanitarian_jenis_kejadian</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="jenis_kejadian" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <record id="humanitarian_jenis_kejadian_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.humanitarian_jenis_kejadian.view.kanban</field>
             <field name="model">humanitarian.humanitarian_jenis_kejadian</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit="25">
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="jenis_kejadian" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                       <field name="jenis_kejadian"></field>
                                     </div>
                                 </div>
                             </div>
@@ -30,7 +36,7 @@
             <field name="name">humanitarian.humanitarian_jenis_kejadian.view.tree</field>
             <field name="model">humanitarian.humanitarian_jenis_kejadian</field>
             <field name="arch" type="xml">
-                <tree string="Jenis Kejadian Details">
+                <tree string="Jenis Kejadian Details" limit="25">
                     <field name="jenis_kejadian" />
                 </tree>
             </field>
