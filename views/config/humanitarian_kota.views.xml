@@ -16,35 +16,6 @@
                 </form>
             </field>
         </record>
-        <record id="humanitarian_kota_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_kota.view.kanban</field>
-            <field name="model">humanitarian.humanitarian_kota</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="provinsi" />
-                                                <field name="kdprov" />
-                                                <field name="kota" />
-                                                <field name="kdkota" />
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
         <record id="humanitarian_kota_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.humanitarian_kota.view.tree</field>
             <field name="model">humanitarian.humanitarian_kota</field>
@@ -67,7 +38,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="kota" name="Kota" parent="humanitarian_location"
+        <menuitem id="humanitarian_kota_id" name="Kota" parent="humanitarian_location"
             action="humanitarian_kota_action" sequence="2" />
     </data>
 </odoo>

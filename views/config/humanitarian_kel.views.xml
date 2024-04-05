@@ -19,38 +19,6 @@
                 </form>
             </field>
         </record>
-        <record id="humanitarian_kel_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_kel.view.kanban</field>
-            <field name="model">humanitarian.humanitarian_kel</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="provinsi" />
-                                                <field name="kota" />
-                                                <field name="kdkota" readonly="1" force_save="1" />
-                                                <field name="kec" />
-                                                <field name="kdkec" readonly="1" force_save="1" />
-                                                <field name="kel" />
-                                                <field name="kdkel" />
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
         <record id="humanitarian_kel_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.humanitarian_kel.view.tree</field>
             <field name="model">humanitarian.humanitarian_kel</field>
@@ -64,6 +32,32 @@
                 </tree>
             </field>
         </record>
+        <record id="humanitarian_kel_view_kanban" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_kel.view.kanban</field>
+            <field name="model">humanitarian.humanitarian_kel</field>
+            <field name="arch" type="xml">
+                <kanban group_create="false">
+                    <field name="kel" />
+                    <field name="kec" />
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="oe_kanban_details">
+                                    <div class="o_kanban_tags_section">
+                                        <ul>
+                                            <li>Desa : <field name="kel"></field>
+                                            </li>
+                                            <li>Kecamatan : <field name="kec"></field>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
         <record id="humanitarian_kel_action" model="ir.actions.act_window">
             <field name="name">Kelurahan</field>
             <field name="res_model">humanitarian.humanitarian_kel</field>
@@ -74,7 +68,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="kelurahan" name="Kelurahan" parent="humanitarian_location"
+        <menuitem id="humanitarian_kelurahan_id" name="Kelurahan" parent="humanitarian_location"
             action="humanitarian_kel_action" sequence="4" />
     </data>
 </odoo>

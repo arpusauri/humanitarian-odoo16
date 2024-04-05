@@ -1,5 +1,15 @@
 <odoo>
     <data>
+        <record id="humanitarian_provinsi_view_tree" model="ir.ui.view">
+            <field name="name">humanitarian.humanitarian_provinsi.view.tree</field>
+            <field name="model">humanitarian.humanitarian_provinsi</field>
+            <field name="arch" type="xml">
+                <tree string="Provinsi Details">
+                    <field name="provinsi" />
+                    <field name="kdprov" />
+                </tree>
+            </field>
+        </record>
         <record id="humanitarian_provinsi_view_form" model="ir.ui.view">
             <field name="name">humanitarian.humanitarian_provinsi.view.form</field>
             <field name="model">humanitarian.humanitarian_provinsi</field>
@@ -14,43 +24,6 @@
                 </form>
             </field>
         </record>
-        <record id="humanitarian_provinsi_view_kanban" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_provinsi.view.kanban</field>
-            <field name="model">humanitarian.humanitarian_provinsi</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="provinsi" />
-                                                <field name="kdprov" />
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-        <record id="humanitarian_provinsi_view_tree" model="ir.ui.view">
-            <field name="name">humanitarian.humanitarian_provinsi.view.tree</field>
-            <field name="model">humanitarian.humanitarian_provinsi</field>
-            <field name="arch" type="xml">
-                <tree string="Provinsi Details">
-                    <field name="provinsi" />
-                    <field name="kdprov" />
-                </tree>
-            </field>
-        </record>
         <record id="humanitarian_provinsi_action" model="ir.actions.act_window">
             <field name="name">Provinsi</field>
             <field name="res_model">humanitarian.humanitarian_provinsi</field>
@@ -61,7 +34,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="province" name="Provinsi" parent="humanitarian_location"
+        <menuitem id="humanitarian_provinsi_id" name="Provinsi" parent="humanitarian_location"
             action="humanitarian_provinsi_action"
             sequence="1" />
     </data>
