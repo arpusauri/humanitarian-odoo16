@@ -6,7 +6,7 @@
             <field name="arch" type="xml">
                 <form string="">
                     <sheet>
-                        <group string="USER">
+                        <group string="INFORMASI USER">
                             <field name="fullname" />
                             <field name="phone" widget="phone" />
                             <field name="email" />
@@ -61,7 +61,7 @@
                     <field name="id_card" />
                     <field name="id_google"
                         readonly="1"
-                     />
+                    />
                     <field name="picture_url" />
                     <field name="active" type="checkbox" />
                 </tree>

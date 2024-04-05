@@ -1,39 +1,36 @@
 <odoo>
     <data>
-        <record id="humanitarian_dampaksarpras_view_form" model="ir.ui.view">
+        <record id="humanitarian_sitrep_dampaksarpras_view_form" model="ir.ui.view">
             <field name="name">humanitarian.sitrep_dampaksarpras.view.form</field>
             <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form>
                     <sheet>
                         <group>
-                            <field name="dampak_site_id" />
                             <field name="kerusakan" />
                             <field name="jumlah" />
                             <field name="satuan" />
+                            <field name="dampak_site_id" readonly="1" />
                         </group>
                     </sheet>
                 </form>
             </field>
         </record>
-        <record id="humanitarian_dampaksarpras_view_kanban" model="ir.ui.view">
+        <record id="humanitarian_sitrep_dampaksarpras_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.sitrep_dampaksarpras.view.kanban</field>
             <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit="25">
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="kerusakan" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <ul>
+                                            <li>Kerusakan : <field name="kerusakan" /></li>
+                                            <li>Jumlah : <field name="jumlah" /></li>
+                                            <li>Satuan : <field name="satuan" /></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -42,18 +39,19 @@
                 </kanban>
             </field>
         </record>
-        <record id="humanitarian_dampaksarpras_view_tree" model="ir.ui.view">
+        <record id="humanitarian_sitrep_dampaksarpras_view_tree" model="ir.ui.view">
             <field name="name">humanitarian.sitrep_dampaksarpras.view.tree</field>
             <field name="model">humanitarian.sitrep_dampaksarpras</field>
             <field name="arch" type="xml">
-                <tree string="Dampak Sarpras Details">
+                <tree string="Dampak Sarpras Details" limit="25">
                     <field name="kerusakan" />
                     <field name="jumlah" />
                     <field name="satuan" />
+                    <field name="dampak_site_id" optional="hide" />
                 </tree>
             </field>
         </record>
-        <record id="humanitarian_dampaksarpras_action" model="ir.actions.act_window">
+        <record id="humanitarian_sitrep_dampaksarpras_action" model="ir.actions.act_window">
             <field name="name">Dampak Sarpras</field>
             <field name="res_model">humanitarian.sitrep_dampaksarpras</field>
             <field name="view_mode">tree,kanban,form,graph,pivot</field>
@@ -63,7 +61,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="dampaksarpras" name="Dampak SarPras" parent="humanitarian_sitrep"
+        <menuitem id="sitrep_dampaksarpras" name="Dampak SarPras" parent="humanitarian_sitrep"
             action="humanitarian_dampaksarpras_action"
             sequence="1" />
     </data>

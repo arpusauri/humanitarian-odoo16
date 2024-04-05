@@ -4,12 +4,12 @@
             <field name="name">humanitarian.sitrep_jmlkorban.view.form</field>
             <field name="model">humanitarian.sitrep_jmlkorban</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form>
                     <sheet>
                         <group>
                             <field name="jenis_korban_jiwa" />
-                            <field name="korban_site_id" />
                             <field name="jumlah" />
+                            <field name="korban_site_id" readonly="1" />
                         </group>
                     </sheet>
                 </form>
@@ -19,20 +19,17 @@
             <field name="name">humanitarian.sitrep_jmlkorban.view.kanban</field>
             <field name="model">humanitarian.sitrep_jmlkorban</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit="25">
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="jenis_korban_jiwa" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <ul>
+                                            <li>Jenis Korban Jiwa : <field name="jenis_korban_jiwa" /></li>
+                                            <li>Jumlah : <field name="jumlah" /></li>
+                                            <li>Site : <field name="korban_site_id" /></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -45,9 +42,10 @@
             <field name="name">humanitarian.sitrep_jmlkorban.view.tree</field>
             <field name="model">humanitarian.sitrep_jmlkorban</field>
             <field name="arch" type="xml">
-                <tree string="Sitrep Jumlah Korban Details">
+                <tree string="Sitrep Jumlah Korban Details" limit="25">
                     <field name="jenis_korban_jiwa" />
                     <field name="jumlah" widget="integer" />
+                    <field name="korban_site_id" optional="hide" />
                 </tree>
             </field>
         </record>

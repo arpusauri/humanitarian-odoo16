@@ -1,23 +1,31 @@
 <odoo>
     <data>
+        <record id="humanitarian_sitrep_dokumentasi_view_form" model="ir.ui.view">
+            <field name="name">humanitarian.sitrep_dokumentasi.view.form</field>
+            <field name="model">humanitarian.sitrep_dokumentasi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="image" />
+                            <field name="dok_site_id" readonly="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <record id="humanitarian_sitrep_dokumentasi_view_kanban" model="ir.ui.view">
             <field name="name">humanitarian.sitrep_dokumentasi.view.kanban</field>
             <field name="model">humanitarian.sitrep_dokumentasi</field>
             <field name="arch" type="xml">
-                <kanban>
+                <kanban limit='25'>
                     <templates>
                         <t t-name="kanban-box">
-                            <div
-                                t-attf-style="border-left: 8px solid; background-color: #ffffff;"
-                                class="oe_kanban_global_click">
+                            <div t-attf-class="oe_kanban_global_click">
                                 <div class="oe_kanban_details">
-                                    <div class="oe_kanban_card">
-                                        <div class="oe_kanban_content"
-                                            style="color: #000; margin-left: 15px;">
-                                            <h2>
-                                                <field name="dok_site_id" />
-                                            </h2>
-                                        </div>
+                                    <div class="o_kanban_tags_section">
+                                        <field name="image" widget="image"></field>
+                                        <field name="dok_site_id" />
                                     </div>
                                 </div>
                             </div>
@@ -30,8 +38,9 @@
             <field name="name">humanitarian.sitrep_dokumentasi.view.tree</field>
             <field name="model">humanitarian.sitrep_dokumentasi</field>
             <field name="arch" type="xml">
-                <tree string="Sitrep Documentation Details">
+                <tree string="Dokumentasi Sitrep Details" limit="25">
                     <field name="image" widget="image" />
+                    <field name="dok_site_id" optional="hide" />
                 </tree>
             </field>
         </record>
@@ -45,7 +54,7 @@
                 </p>
             </field>
         </record>
-        <menuitem id="sitrep_dokumentasi" name="Dokumentasi" parent="humanitarian_sitrep"
+        <menuitem id="sitrep_dokumentasi" name="Dokumentasi Site Report" parent="humanitarian_sitrep"
             action="humanitarian_sitrep_dokumentasi_action" sequence="6" />
     </data>
 </odoo>

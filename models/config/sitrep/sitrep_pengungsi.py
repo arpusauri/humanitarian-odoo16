@@ -6,4 +6,4 @@ class Pengungsi(models.Model):
 
     lokasi_pengungsian = fields.Char(string="Lokasi Pengungsian")
     jumlah = fields.Integer(string="Jumlah")
-    pengungsi_site_id = fields.Many2one('humanitarian.humanitarian_sitrep', string='Situation')
+    pengungsi_site_id = fields.Many2one('humanitarian.humanitarian_sitrep', string='Situation ID')
